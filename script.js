@@ -110,10 +110,13 @@
   const dots = $$('[data-status-dot]');
 
   // Два независимых API: если первый не ответил, пробуем второй.
+  // «Оффлайн» засчитываем только от основного API: резервный умеет отдавать
+  // online:false из кеша неудачной проверки, и это не значит, что сервер лежит.
   const PROVIDERS = [
     {
       name: 'api.mcstatus.io',
       url: 'https://api.mcstatus.io/v2/status/java/wellyfun.x2mc.ru',
+      reliableOffline: true,
       parse(data) {
         return {
           online: Boolean(data.online),
@@ -284,7 +287,7 @@
             resolve({ result });
             return;
           }
-          if (!offlineResult) offlineResult = result;
+          if (provider.reliableOffline && !offlineResult) offlineResult = result;
         } catch (error) {
           lastError = error;
         } finally {
