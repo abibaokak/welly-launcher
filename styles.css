@@ -317,6 +317,7 @@ code {
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
+  white-space: nowrap;
   color: var(--muted);
   transition: color 160ms ease, background 160ms ease;
 }
@@ -325,6 +326,15 @@ code {
 .nav__link.is-active {
   color: var(--text);
   background: rgba(255, 255, 255, 0.05);
+}
+
+.nav__link--external {
+  color: var(--gold);
+}
+
+.nav__link--external:hover {
+  color: var(--yellow);
+  background: rgba(255, 201, 60, 0.12);
 }
 
 .header__actions {
@@ -1621,11 +1631,7 @@ code {
   }
 }
 
-@media (max-width: 940px) {
-  :root {
-    --header-h: 70px;
-  }
-
+@media (max-width: 1080px) {
   .nav {
     position: absolute;
     top: calc(100% + 8px);
@@ -1661,6 +1667,12 @@ code {
 
   .header__actions {
     margin-left: auto;
+  }
+}
+
+@media (max-width: 940px) {
+  :root {
+    --header-h: 70px;
   }
 
   .hero {
