@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welly Launcher — лаунчер Minecraft для сервера WellyFun</title>
+    <meta
+      name="description"
+      content="Welly Launcher — бесплатный лаунчер Minecraft Java Edition для сервера WellyFun. 920 версий, автоматическая Java, оффлайн-аккаунт и подключение в один клик."
+    />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Welly Launcher — Играй. Строй. Сияй." />
+    <meta
+      property="og:description"
+      content="Лаунчер Minecraft для сервера WellyFun: 920 версий, авто-Java, оффлайн-аккаунт и игра в один клик."
+    />
+    <meta property="og:image" content="assets/screenshots/home.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Welly Launcher",
+        "operatingSystem": "Windows 10, Windows 11",
+        "applicationCategory": "GameApplication",
+        "description": "Лаунчер Minecraft Java Edition для сервера WellyFun: 920 версий, автоматическая Java и оффлайн-аккаунт.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" },
+        "inLanguage": "ru"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="orbs" aria-hidden="true">
+      <div class="orb orb--violet"></div>
+      <div class="orb orb--cyan"></div>
+      <div class="orb orb--gold"></div>
+      <div class="grid-dots"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Welly Launcher — на главную">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="46" height="46" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Minecraft • WellyFun</small>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="#features">Возможности</a>
+          <a class="nav__link" href="#screenshots">Скриншоты</a>
+          <a class="nav__link" href="#server">Сервер</a>
+          <a class="nav__link" href="#install">Установка</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+        </nav>
+
+        <div class="header__actions">
+          <a
+            class="icon-link"
+            data-github
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Welly Launcher на GitHub"
+          >
+            <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+              />
+            </svg>
+          </a>
+          <a class="btn btn--gold btn--sm" data-download href="#install">
+            <span class="btn__icon" aria-hidden="true">⬇</span>
+            Скачать
+          </a>
+          <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <span class="status-pill" data-status-pill>
+              <span class="status-pill__dot" data-status-dot></span>
+              <span data-status-text>Проверяем сервер…</span>
+            </span>
+
+            <p class="eyebrow">Minecraft Java Edition • WellyFun Edition</p>
+
+            <h1 class="hero__title">
+              Играй. Строй.<br />
+              <span class="gradient-text">Сияй.</span>
+            </h1>
+
+            <p class="hero__lead">
+              Welly Launcher сам скачает нужную версию, Java и подключит к серверу
+              <strong>WellyFun</strong>. Без паролей, установок и лишних кликов.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--gold btn--lg" data-download href="#install">
+                <span class="btn__icon" aria-hidden="true">⬇</span>
+                <span class="btn__stack">
+                  <strong>Скачать лаунчер</strong>
+                  <small>Windows 10/11 • v0.2 • 71 МБ</small>
+                </span>
+              </a>
+              <button class="btn btn--ghost btn--lg copy-ip" data-ip="wellyfun.x2mc.ru" type="button">
+                <span class="btn__stack btn__stack--left">
+                  <small>IP сервера</small>
+                  <strong>wellyfun.x2mc.ru</strong>
+                </span>
+                <span class="copy-ip__icon" aria-hidden="true">⧉</span>
+              </button>
+            </div>
+
+            <dl class="hero__stats">
+              <div class="hero__stat">
+                <dt>Версии</dt>
+                <dd>920</dd>
+              </div>
+              <div class="hero__stat">
+                <dt>Java</dt>
+                <dd>8–25</dd>
+              </div>
+              <div class="hero__stat">
+                <dt>Установка</dt>
+                <dd>не нужна</dd>
+              </div>
+            </dl>
+
+            <div class="hero__versions" aria-label="Популярные версии">
+              <span>Популярное:</span>
+              <a data-version="1.8.9" href="#install">1.8.9</a>
+              <a data-version="1.12.2" href="#install">1.12.2</a>
+              <a data-version="1.16.5" href="#install">1.16.5</a>
+              <a data-version="1.20.1" href="#install">1.20.1</a>
+              <a data-version="1.21.11" href="#install">1.21.11</a>
+              <a data-version="26.3" href="#install">26.3</a>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="mockup">
+              <div class="mockup__bar">
+                <span class="mockup__dot mockup__dot--red"></span>
+                <span class="mockup__dot mockup__dot--yellow"></span>
+                <span class="mockup__dot mockup__dot--green"></span>
+                <span class="mockup__title">Welly Launcher — v0.2</span>
+              </div>
+              <img
+                class="mockup__img"
+                src="assets/screenshots/home.png"
+                alt="Главная страница Welly Launcher: выбор версии Minecraft и быстрый старт"
+                width="1224"
+                height="781"
+                fetchpriority="high"
+              />
+            </div>
+
+            <div class="float-card float-card--status">
+              <span class="float-card__label">Сервер WellyFun</span>
+              <span class="float-card__value" data-status-players>0 / —</span>
+              <span class="float-card__hint" data-status-state>проверяем…</span>
+            </div>
+
+            <div class="float-card float-card--versions">
+              <span class="float-card__emoji" aria-hidden="true">🧩</span>
+              <div>
+                <span class="float-card__value">920 версий</span>
+                <span class="float-card__hint">Alpha → 26.3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Всё уже внутри</p>
+            <h2 class="section__title">Меньше настройки.<br />Больше игры.</h2>
+            <p class="section__lead">
+              Один лаунчер вместо десяти программ, инструкций и поисков нужной Java.
+            </p>
+          </div>
+
+          <div class="features">
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--violet" aria-hidden="true">🧩</span>
+              <h3>920 версий</h3>
+              <p>От Alpha до 26.3. Выбирай любую — лаунчер сам скачает клиент, библиотеки и ассеты.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--gold" aria-hidden="true">☕</span>
+              <h3>Java сама</h3>
+              <p>Подходящая Java 8–25 находится и скачивается автоматически. Никаких настроек.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--cyan" aria-hidden="true">🎭</span>
+              <h3>Без пароля</h3>
+              <p>Оффлайн-аккаунт: ввёл ник — и играешь. Вход через Microsoft появится позже.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--pink" aria-hidden="true">⚡</span>
+              <h3>В один клик</h3>
+              <p>«Играть на сервере» запускает Minecraft и сразу подключает к wellyfun.x2mc.ru.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--blue" aria-hidden="true">📡</span>
+              <h3>Живой статус</h3>
+              <p>Онлайн сервера, свежие новости и описания версий прямо на главной лаунчера.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--lime" aria-hidden="true">🧳</span>
+              <h3>Portable</h3>
+              <p>Один exe без установки. Ярлык на рабочий стол создаётся в настройках за секунду.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--screens" id="screenshots">
+        <div class="container">
+          <div class="section__head section__head--row reveal">
+            <div>
+              <p class="eyebrow">Как это выглядит</p>
+              <h2 class="section__title">Скриншоты</h2>
+              <p class="section__lead">Тёмный интерфейс, золотые акценты и всё нужное на расстоянии клика.</p>
+            </div>
+            <span class="hint">Нажми на картинку, чтобы увеличить</span>
+          </div>
+
+          <div class="gallery" id="gallery">
+            <figure class="shot shot--wide reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/home.png" data-caption="Главная — выбор версии и быстрый старт">
+                <img src="assets/screenshots/home.png" alt="Главная страница лаунчера" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>Главная — выбор версии и быстрый старт</figcaption>
+            </figure>
+
+            <figure class="shot reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/versions.png" data-caption="920 версий с описаниями">
+                <img src="assets/screenshots/versions.png" alt="Страница версий Minecraft" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>920 версий с описаниями</figcaption>
+            </figure>
+
+            <figure class="shot reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/servers.png" data-caption="Серверы и режимы WellyFun">
+                <img src="assets/screenshots/servers.png" alt="Страница серверов WellyFun" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>Серверы и режимы WellyFun</figcaption>
+            </figure>
+
+            <figure class="shot reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/news.png" data-caption="Новости сервера и Minecraft">
+                <img src="assets/screenshots/news.png" alt="Страница новостей лаунчера" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>Новости сервера и Minecraft</figcaption>
+            </figure>
+
+            <figure class="shot reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/settings.png" data-caption="Настройки: ник, Java, память, ярлык">
+                <img src="assets/screenshots/settings.png" alt="Страница настроек лаунчера" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>Настройки: ник, Java, память, ярлык</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--server" id="server">
+        <div class="container server">
+          <div class="server__copy reveal">
+            <p class="eyebrow">Наш дом в Minecraft</p>
+            <h2 class="section__title">Сервер WellyFun</h2>
+            <p class="section__lead">
+              Выживание, матчмейкинг и хаб — на одном адресе. Заходи с любой версией
+              от 1.7.2 до 26.3, лаунчер подключит автоматически.
+            </p>
+
+            <ul class="server__list">
+              <li><span aria-hidden="true">🌲</span> Переработанный SMP с дружелюбным сообществом</li>
+              <li><span aria-hidden="true">⚡</span> Быстрый матчмейкинг прямо из хаба</li>
+              <li><span aria-hidden="true">🧭</span> Velocity: одна точка входа для всех режимов</li>
+            </ul>
+
+            <div class="server__actions">
+              <button class="btn btn--gold copy-ip" data-ip="wellyfun.x2mc.ru" type="button">
+                <span aria-hidden="true">⧉</span> Скопировать IP
+              </button>
+              <a class="btn btn--ghost" href="https://wellyfun.x2mc.ru" target="_blank" rel="noopener">
+                Сайт сервера <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="server-card card reveal" data-server-card>
+            <div class="server-card__top">
+              <span class="server-card__logo" aria-hidden="true">🌿</span>
+              <div class="server-card__names">
+                <strong>WellyFun</strong>
+                <span class="server-card__addr">wellyfun.x2mc.ru</span>
+              </div>
+              <span class="badge" data-status-badge>Проверяем…</span>
+            </div>
+
+            <div class="server-card__motd" data-status-motd>
+              Загружаем описание сервера…
+            </div>
+
+            <div class="server-card__grid">
+              <div class="server-card__stat">
+                <span>Игроки</span>
+                <strong data-status-players>0 / —</strong>
+              </div>
+              <div class="server-card__stat">
+                <span>Версии</span>
+                <strong data-status-version>1.7.2 – 26.3</strong>
+              </div>
+              <div class="server-card__stat">
+                <span>Режимы</span>
+                <strong>SMP • Матчмейкинг</strong>
+              </div>
+              <div class="server-card__stat">
+                <span>Ядро</span>
+                <strong>Velocity</strong>
+              </div>
+            </div>
+
+            <div class="server-card__ip">
+              <div>
+                <span class="server-card__ip-label">IP сервера</span>
+                <code>wellyfun.x2mc.ru</code>
+              </div>
+              <button class="icon-btn copy-ip" data-ip="wellyfun.x2mc.ru" type="button" aria-label="Скопировать IP сервера">
+                ⧉
+              </button>
+            </div>
+
+            <div class="server-card__foot">
+              <span class="server-card__updated" data-status-updated>Статус обновляется автоматически</span>
+              <button class="link-btn" id="status-refresh" type="button">
+                <span aria-hidden="true">↻</span> Обновить
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="install">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Три шага</p>
+            <h2 class="section__title">Как начать играть</h2>
+            <p class="section__lead">Скачивание, первый запуск и подключение к серверу.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="card step reveal">
+              <span class="step__num">01</span>
+              <span class="step__icon" aria-hidden="true">⬇</span>
+              <h3>Скачай лаунчер</h3>
+              <p>
+                Один файл <strong>WellyLauncher.exe</strong> на 71 МБ. Windows 10 и 11,
+                установка не требуется.
+              </p>
+              <a class="link-arrow" data-download href="#top">К скачиванию <span aria-hidden="true">→</span></a>
+            </li>
+
+            <li class="card step reveal">
+              <span class="step__num">02</span>
+              <span class="step__icon" aria-hidden="true">🚀</span>
+              <h3>Запусти</h3>
+              <p>
+                Открой файл. Если Windows покажет SmartScreen — нажми
+                «Подробнее» → «Выполнить в любом случае».
+              </p>
+              <span class="step__note">Файл без цифровой подписи, поэтому Windows перестраховывается.</span>
+            </li>
+
+            <li class="card step reveal">
+              <span class="step__num">03</span>
+              <span class="step__icon" aria-hidden="true">⛏️</span>
+              <h3>Выбери ник и версию</h3>
+              <p>
+                Введи ник, выбери Minecraft и нажми «Играть на сервере».
+                Клиент и Java скачаются сами.
+              </p>
+              <span class="step__note">Первый запуск может занять несколько минут — это нормально.</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container faq">
+          <div class="faq__intro reveal">
+            <p class="eyebrow">Вопросы</p>
+            <h2 class="section__title">FAQ</h2>
+            <p class="section__lead">
+              Коротко о том, что чаще всего спрашивают перед первым запуском.
+            </p>
+            <div class="faq__help card">
+              <span aria-hidden="true">💬</span>
+              <p>Не нашёл ответ? Загляни на сайт сервера — там есть чат и правила.</p>
+              <a class="link-arrow" href="https://wellyfun.x2mc.ru" target="_blank" rel="noopener">
+                wellyfun.x2mc.ru <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="faq__list">
+            <details class="faq__item reveal" open>
+              <summary>Это безопасно? Нужен ли пароль от Microsoft?</summary>
+              <div class="faq__body">
+                Лаунчер работает с оффлайн-аккаунтом: достаточно придумать ник. Пароль от
+                Microsoft не запрашивается и не хранится. Поддержка официального входа
+                появится в следующих версиях.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Нужно ли устанавливать Java?</summary>
+              <div class="faq__body">
+                Нет. Лаунчер сам подберёт и скачает подходящую Java 8–25 для выбранной
+                версии Minecraft. Уже установленная Java тоже подойдёт, если она совместима.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Windows пишет «Неизвестный издатель». Это вирус?</summary>
+              <div class="faq__body">
+                Нет. У файла нет платной цифровой подписи, поэтому SmartScreen показывает
+                предупреждение. Нажми «Подробнее» → «Выполнить в любом случае». Скачивай
+                лаунчер только со страницы релизов этого сайта.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Какие версии Minecraft поддерживаются?</summary>
+              <div class="faq__body">
+                От Alpha до 26.3 — всего 920 версий, включая популярные 1.8.9, 1.12.2,
+                1.16.5, 1.20.1, 1.21.11 и 26.3. Сервер принимает подключения с 1.7.2 по 26.2.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Куда скачиваются файлы игры?</summary>
+              <div class="faq__body">
+                В папку лаунчера. Путь и объём можно посмотреть в настройках. Клиент,
+                библиотеки и ассеты скачиваются один раз и переиспользуются для всех версий.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Лаунчер официальный?</summary>
+              <div class="faq__body">
+                Это фанатский проект для сервера WellyFun. Он не связан с Mojang Studios
+                или Microsoft. Minecraft — торговая марка Mojang Studios.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta__panel reveal">
+            <div class="cta__glow" aria-hidden="true"></div>
+            <p class="eyebrow">WellyFun ждёт</p>
+            <h2 class="cta__title">Готов залететь<br /><span class="gradient-text">на сервер?</span></h2>
+            <p class="cta__lead">Скачай лаунчер, придумай ник и окажись в игре через пару минут.</p>
+            <div class="cta__actions">
+              <a class="btn btn--gold btn--lg" data-download href="#install">
+                <span class="btn__icon" aria-hidden="true">⬇</span>
+                <span class="btn__stack">
+                  <strong>Скачать Welly Launcher</strong>
+                  <small>Windows 10/11 • v0.2 • 71 МБ</small>
+                </span>
+              </a>
+              <button class="btn btn--ghost btn--lg copy-ip" data-ip="wellyfun.x2mc.ru" type="button">
+                <span aria-hidden="true">⧉</span> wellyfun.x2mc.ru
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="42" height="42" loading="lazy" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Играй. Строй. Сияй.</small>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Ссылки в подвале">
+          <a href="#features">Возможности</a>
+          <a href="#screenshots">Скриншоты</a>
+          <a href="#install">Установка</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://wellyfun.x2mc.ru" target="_blank" rel="noopener">Сайт сервера ↗</a>
+        </nav>
+
+        <p class="footer__legal">
+          © <span id="year">2026</span> WellyFun. Фанатский проект, не связан с Mojang Studios
+          или Microsoft. Minecraft — торговая марка Mojang Studios.
+        </p>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр скриншота" hidden>
+      <button class="lightbox__close" type="button" aria-label="Закрыть">✕</button>
+      <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Предыдущий">‹</button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" src="" alt="" />
+        <figcaption class="lightbox__caption"></figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Следующий">›</button>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
