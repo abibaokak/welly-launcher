@@ -55,7 +55,7 @@ gh api -X POST repos/:owner/welly-launcher/pages \
 Сайт скачивает файл из последнего релиза с именем ровно `WellyLauncher.exe`.
 
 1. Открой репозиторий → **Releases** → **Draft a new release**.
-2. Тег: `v0.2` (или любой новый), заголовок: `Welly Launcher v0.2`.
+2. Тег: `v0.3` (или любой новый), заголовок: `Welly Launcher v0.3`.
 3. Прикрепи собранный `WellyLauncher.exe` (около 71 МБ) и опубликуй релиз.
 
 Кнопки на сайте сразу начнут отдавать этот файл — ссылка `…/releases/latest/download/WellyLauncher.exe`.
