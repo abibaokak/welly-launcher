@@ -21,9 +21,13 @@
 
   /* ---------- Downloads & GitHub links ---------- */
 
+  // На своём домене (wellylauncher.ru) имя репозитория из адреса не вычислить,
+  // поэтому используем явный запасной вариант.
+  const FALLBACK_REPO = { owner: 'abibaokak', repo: 'welly-launcher' };
+
   function resolveRepo() {
     const match = location.hostname.match(/^([a-z0-9-]+)\.github\.io$/i);
-    if (!match) return null;
+    if (!match) return FALLBACK_REPO;
     const owner = match[1];
     const firstSegment = location.pathname.split('/').filter(Boolean)[0];
     const repo = firstSegment || `${owner}.github.io`;
@@ -31,30 +35,19 @@
   }
 
   const repo = resolveRepo();
-  const releaseUrl = repo
-    ? `https://github.com/${repo.owner}/${repo.repo}/releases/latest/download/WellyLauncher.exe`
-    : null;
+  const releaseUrl = `https://github.com/${repo.owner}/${repo.repo}/releases/latest/download/WellyLauncher.exe`;
 
   $$('[data-download]').forEach((link) => {
-    if (releaseUrl) {
-      link.href = releaseUrl;
-      link.setAttribute('download', '');
-    }
-    link.addEventListener('click', (event) => {
-      if (!releaseUrl) {
-        event.preventDefault();
-        showToast('Ссылка появится после публикации сайта на GitHub Pages.', true);
-        return;
-      }
+    link.href = releaseUrl;
+    link.setAttribute('download', '');
+    link.addEventListener('click', () => {
       showToast('Скачивание началось — проверь папку «Загрузки».');
     });
   });
 
-  if (repo) {
-    $$('[data-github]').forEach((link) => {
-      link.href = `https://github.com/${repo.owner}/${repo.repo}`;
-    });
-  }
+  $$('[data-github]').forEach((link) => {
+    link.href = `https://github.com/${repo.owner}/${repo.repo}`;
+  });
 
   $$('[data-version]').forEach((chip) => {
     chip.addEventListener('click', () => {
@@ -473,7 +466,10 @@
     renderShot(index);
     lightbox.hidden = false;
     document.body.classList.add('is-locked');
-    requestAnimationFrame(() => lightbox.classList.add('is-open'));
+    // Принудительный reflow: без него transition не сработает,
+    // а requestAnimationFrame может не выполниться в фоновой вкладке.
+    void lightbox.offsetWidth;
+    lightbox.classList.add('is-open');
     closeButton?.focus();
   }
 
