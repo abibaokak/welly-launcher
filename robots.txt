@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wellylauncher.ru/sitemap.xml
+Sitemap: https://abibaokak.github.io/welly-launcher/sitemap.xml
