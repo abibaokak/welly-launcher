@@ -1,7 +1,8 @@
 # Welly Launcher — сайт
 
 Одностраничный сайт лаунчера на русском: скачивание, скриншоты, возможности,
-живой статус сервера WellyFun и FAQ.
+живой статус сервера WellyFun и FAQ. Сайт описывает актуальную версию **0.5**:
+тёмную, светлую и системную темы, RU/EN, 3D-редактор скинов и аккаунт Welly ID.
 
 - Чистый HTML + CSS + JS, без сборки.
 - Автоматическая публикация на GitHub Pages из ветки `main`.
@@ -15,6 +16,10 @@
 - Ссылки «Магазин» / «Сайт и магазин» ведут на официальный сайт сервера
   `https://donatesmp.mydonate.io/`. Если адрес сменится, поменяй его в четырёх
   местах `index.html`: меню в шапке, блок «Сервер», блок помощи в FAQ и подвал.
+
+> Welly ID — функция лаунчера. Серверная часть находится в
+> `../welly-launcher/server`; этот репозиторий остаётся статическим и backend
+> не содержит.
 
 ## Структура
 
@@ -55,8 +60,8 @@ gh api -X POST repos/:owner/welly-launcher/pages \
 Сайт скачивает файл из последнего релиза с именем ровно `WellyLauncher.exe`.
 
 1. Открой репозиторий → **Releases** → **Draft a new release**.
-2. Тег: `v0.3` (или любой новый), заголовок: `Welly Launcher v0.3`.
-3. Прикрепи собранный `WellyLauncher.exe` (около 71 МБ) и опубликуй релиз.
+2. Тег: `v0.5`, заголовок: `Welly Launcher v0.5`.
+3. Прикрепи собранный `WellyLauncher.exe` и опубликуй релиз.
 
 Кнопки на сайте сразу начнут отдавать этот файл — ссылка `…/releases/latest/download/WellyLauncher.exe`.
 Если выпустить релиз с тем же тегом заново, GitHub сам заменит файл.
@@ -68,10 +73,19 @@ gh api -X POST repos/:owner/welly-launcher/pages \
 ```powershell
 $env:WELLY_SCREENSHOT = "C:\путь\welly-site\assets\screenshots\home.png"
 $env:WELLY_SCREENSHOT_ROUTE = "/home"
+$env:WELLY_SCREENSHOT_LANG = "ru"
+$env:WELLY_SCREENSHOT_THEME = "dark"
 & "C:\путь\WellyLauncher.exe"
 ```
 
-Доступные маршруты: `/home`, `/versions`, `/servers`, `/news`, `/settings`.
+Доступные маршруты: `/home`, `/versions`, `/servers`, `/news`, `/settings`,
+`/skin`, `/account`. Для светлой темы задай `WELLY_SCREENSHOT_THEME=light`,
+для английского — `WELLY_SCREENSHOT_LANG=en`.
+
+В галерее сайта восемь файлов: `home.png` и `skin.png` — широкие,
+`versions.png`, `servers.png`, `news.png`, `settings.png`, `account.png`
+и `home-light.png` (главная в светлой теме) — парами.
+
 После запуска лаунчер сам сохранит PNG и закроется.
 
 ## Локальный просмотр

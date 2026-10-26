@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Welly Launcher — лаунчер Minecraft для сервера WellyFun</title>
+    <title>Welly Launcher 0.5 — темы, скины и Welly ID | Minecraft для WellyFun</title>
     <meta
       name="description"
-      content="Welly Launcher — бесплатный лаунчер Minecraft Java Edition для сервера WellyFun. 920 версий, автоматическая Java, оффлайн-аккаунт и подключение в один клик."
+      content="Welly Launcher 0.5 — бесплатный лаунчер Minecraft Java Edition для сервера WellyFun. 920 версий, автоматическая Java, тёмная/светлая тема, RU/EN, 3D-редактор скинов и аккаунт Welly ID."
     />
     <meta name="theme-color" content="#08070f" />
     <meta name="color-scheme" content="dark" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Welly Launcher — Играй. Строй. Сияй." />
+    <meta property="og:title" content="Welly Launcher 0.5 — Играй. Строй. Сияй." />
     <meta
       property="og:description"
-      content="Лаунчер Minecraft для сервера WellyFun: 920 версий, авто-Java, оффлайн-аккаунт и игра в один клик."
+      content="Лаунчер Minecraft для WellyFun: 920 версий, авто-Java, три темы, RU/EN, 3D-редактор скинов и Welly ID."
     />
     <meta property="og:image" content="assets/screenshots/home.png" />
     <meta property="og:locale" content="ru_RU" />
@@ -41,7 +41,8 @@
         "name": "Welly Launcher",
         "operatingSystem": "Windows 10, Windows 11",
         "applicationCategory": "GameApplication",
-        "description": "Лаунчер Minecraft Java Edition для сервера WellyFun: 920 версий, автоматическая Java и оффлайн-аккаунт.",
+        "softwareVersion": "0.5.0",
+        "description": "Лаунчер Minecraft Java Edition для сервера WellyFun: 920 версий, автоматическая Java, темы, редактор скинов и аккаунт Welly ID.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB" },
         "inLanguage": "ru"
       }
@@ -69,6 +70,7 @@
 
         <nav class="nav" id="nav" aria-label="Основная навигация">
           <a class="nav__link" href="#features">Возможности</a>
+          <a class="nav__link" href="#new">Что нового</a>
           <a class="nav__link" href="#screenshots">Скриншоты</a>
           <a class="nav__link" href="#server">Сервер</a>
           <a class="nav__link" href="#install">Установка</a>
@@ -119,7 +121,7 @@
               <span data-status-text>Проверяем сервер…</span>
             </span>
 
-            <p class="eyebrow">Minecraft Java Edition • WellyFun Edition</p>
+            <p class="eyebrow">Minecraft Java Edition • WellyFun Edition • v0.5</p>
 
             <h1 class="hero__title">
               Играй. Строй.<br />
@@ -128,7 +130,8 @@
 
             <p class="hero__lead">
               Welly Launcher сам скачает нужную версию, Java и подключит к серверу
-              <strong>WellyFun</strong>. Без паролей, установок и лишних кликов.
+              <strong>WellyFun</strong>. Внутри — три темы, русский и английский,
+              3D-редактор скинов и аккаунт Welly ID.
             </p>
 
             <div class="hero__actions">
@@ -136,7 +139,7 @@
                 <span class="btn__icon" aria-hidden="true">⬇</span>
                 <span class="btn__stack">
                   <strong>Скачать лаунчер</strong>
-                  <small>Windows 10/11 • v0.3 • 71 МБ</small>
+                  <small>Windows 10/11 • v0.5</small>
                 </span>
               </a>
               <button class="btn btn--ghost btn--lg copy-ip" data-ip="wellyfun.x2mc.ru" type="button">
@@ -158,8 +161,12 @@
                 <dd>8–25</dd>
               </div>
               <div class="hero__stat">
-                <dt>Установка</dt>
-                <dd>не нужна</dd>
+                <dt>Языки</dt>
+                <dd>RU / EN</dd>
+              </div>
+              <div class="hero__stat">
+                <dt>Темы</dt>
+                <dd>3</dd>
               </div>
             </dl>
 
@@ -180,7 +187,7 @@
                 <span class="mockup__dot mockup__dot--red"></span>
                 <span class="mockup__dot mockup__dot--yellow"></span>
                 <span class="mockup__dot mockup__dot--green"></span>
-                <span class="mockup__title">Welly Launcher — v0.3</span>
+                <span class="mockup__title">Welly Launcher — v0.5</span>
               </div>
               <img
                 class="mockup__img"
@@ -232,10 +239,25 @@
               <p>Подходящая Java 8–25 находится и скачивается автоматически. Никаких настроек.</p>
             </article>
 
+            <article class="card feature feature--accent reveal">
+              <span class="feature__tag">Новое</span>
+              <span class="feature__icon feature__icon--cyan" aria-hidden="true">🪪</span>
+              <h3>Welly ID</h3>
+              <p>Отдельный аккаунт лаунчера, не Microsoft. Пароль хранится только в виде Argon2id-хеша.</p>
+            </article>
+
             <article class="card feature reveal">
-              <span class="feature__icon feature__icon--cyan" aria-hidden="true">🎭</span>
-              <h3>Без пароля</h3>
-              <p>Оффлайн-аккаунт: ввёл ник — и играешь. Вход через Microsoft появится позже.</p>
+              <span class="feature__tag">Новое</span>
+              <span class="feature__icon feature__icon--pink" aria-hidden="true">🎨</span>
+              <h3>Скины в 3D</h3>
+              <p>Редактор 64×64 со слоями Steve и Alex, импортом и экспортом PNG и библиотекой скинов.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__tag">Новое</span>
+              <span class="feature__icon feature__icon--blue" aria-hidden="true">🌗</span>
+              <h3>Темы и язык</h3>
+              <p>Тёмная, светлая или системная тема. Русский и английский переключаются без перезапуска.</p>
             </article>
 
             <article class="card feature reveal">
@@ -255,6 +277,101 @@
               <h3>Portable</h3>
               <p>Один exe без установки. Ярлык на рабочий стол создаётся в настройках за секунду.</p>
             </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--cyan" aria-hidden="true">🎭</span>
+              <h3>Без пароля</h3>
+              <p>Оффлайн-профиль: ввёл ник — и играешь. Пароль от Microsoft не нужен.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--new" id="new">
+        <div class="container">
+          <div class="section__head section__head--row reveal">
+            <div>
+              <p class="eyebrow">Версия 0.5</p>
+              <h2 class="section__title">Что нового<br />в 0.5</h2>
+              <p class="section__lead">
+                Интерфейс под себя, собственный редактор скинов и аккаунт Welly ID.
+              </p>
+            </div>
+            <span class="version-badge">v0.5.0</span>
+          </div>
+
+          <div class="new-grid">
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/home-light.png"
+                  alt="Главная страница Welly Launcher в светлой теме"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Темы</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Тёмная, светлая, системная</h3>
+                <p>
+                  Тема применяется сразу и запоминается между запусками — без вспышки
+                  белого экрана при старте.
+                </p>
+                <ul class="new-card__list">
+                  <li>Русский и английский без перезапуска</li>
+                  <li>Контраст проверен в обеих темах</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/skin.png"
+                  alt="3D-редактор скинов в Welly Launcher"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Скины</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Редактор скинов 64×64</h3>
+                <p>
+                  Рисуй прямо в лаунчере: базовый и внешний слой, модели Steve и Alex,
+                  сетка, пипетка и масштаб.
+                </p>
+                <ul class="new-card__list">
+                  <li>Импорт и экспорт PNG</li>
+                  <li>Своя библиотека скинов и undo/redo</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/account.png"
+                  alt="Страница аккаунта Welly ID в лаунчере"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Аккаунт</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Welly ID</h3>
+                <p>
+                  Отдельный аккаунт лаунчера: регистрация по почте, подтверждение,
+                  восстановление пароля и профиль.
+                </p>
+                <ul class="new-card__list">
+                  <li>Argon2id и защита от перебора</li>
+                  <li>Безопасные токены сессий и HTTPS</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -265,7 +382,7 @@
             <div>
               <p class="eyebrow">Как это выглядит</p>
               <h2 class="section__title">Скриншоты</h2>
-              <p class="section__lead">Тёмный интерфейс, золотые акценты и всё нужное на расстоянии клика.</p>
+              <p class="section__lead">Три темы, RU/EN, редактор скинов и Welly ID — на реальных скриншотах версии 0.5.</p>
             </div>
             <span class="hint">Нажми на картинку, чтобы увеличить</span>
           </div>
@@ -304,11 +421,35 @@
             </figure>
 
             <figure class="shot reveal">
-              <button class="shot__btn" type="button" data-full="assets/screenshots/settings.png" data-caption="Настройки: ник, Java, память, ярлык">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/settings.png" data-caption="Настройки: тема, язык, Java и память">
                 <img src="assets/screenshots/settings.png" alt="Страница настроек лаунчера" loading="lazy" width="1224" height="781" />
                 <span class="shot__zoom" aria-hidden="true">↗</span>
               </button>
-              <figcaption>Настройки: ник, Java, память, ярлык</figcaption>
+              <figcaption>Настройки: тема, язык, Java и память</figcaption>
+            </figure>
+
+            <figure class="shot shot--wide reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/skin.png" data-caption="3D-редактор скинов 64×64">
+                <img src="assets/screenshots/skin.png" alt="3D-редактор скинов в лаунчере" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>3D-редактор скинов 64×64</figcaption>
+            </figure>
+
+            <figure class="shot reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/account.png" data-caption="Welly ID — вход и профиль">
+                <img src="assets/screenshots/account.png" alt="Страница аккаунта Welly ID" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>Welly ID — вход и профиль</figcaption>
+            </figure>
+
+            <figure class="shot reveal">
+              <button class="shot__btn" type="button" data-full="assets/screenshots/home-light.png" data-caption="Светлая тема и переключение языка">
+                <img src="assets/screenshots/home-light.png" alt="Главная страница лаунчера в светлой теме" loading="lazy" width="1224" height="781" />
+                <span class="shot__zoom" aria-hidden="true">↗</span>
+              </button>
+              <figcaption>Светлая тема и переключение языка</figcaption>
             </figure>
           </div>
         </div>
@@ -321,7 +462,7 @@
             <h2 class="section__title">Сервер WellyFun</h2>
             <p class="section__lead">
               Выживание, матчмейкинг и хаб — на одном адресе. Заходи с любой версией
-              от 1.7.2 до 26.3, лаунчер подключит автоматически.
+              от 1.7.2 до 26.2, лаунчер подключит автоматически.
             </p>
 
             <ul class="server__list">
@@ -361,7 +502,7 @@
               </div>
               <div class="server-card__stat">
                 <span>Версии</span>
-                <strong data-status-version>1.7.2 – 26.3</strong>
+                <strong data-status-version>1.7.2 – 26.2</strong>
               </div>
               <div class="server-card__stat">
                 <span>Режимы</span>
@@ -407,8 +548,8 @@
               <span class="step__icon" aria-hidden="true">⬇</span>
               <h3>Скачай лаунчер</h3>
               <p>
-                Один файл <strong>WellyLauncher.exe</strong> на 71 МБ. Windows 10 и 11,
-                установка не требуется.
+                Один файл <strong>WellyLauncher.exe</strong> для Windows 10 и 11.
+                Установка не требуется — просто запусти файл.
               </p>
               <a class="link-arrow" data-download href="#top">К скачиванию <span aria-hidden="true">→</span></a>
             </li>
@@ -429,7 +570,7 @@
               <span class="step__icon" aria-hidden="true">⛏️</span>
               <h3>Выбери ник и версию</h3>
               <p>
-                Введи ник, выбери Minecraft и нажми «Играть на сервере».
+                Введи ник или войди в Welly ID, выбери Minecraft и нажми «Играть на сервере».
                 Клиент и Java скачаются сами.
               </p>
               <span class="step__note">Первый запуск может занять несколько минут — это нормально.</span>
@@ -457,11 +598,40 @@
 
           <div class="faq__list">
             <details class="faq__item reveal" open>
-              <summary>Это безопасно? Нужен ли пароль от Microsoft?</summary>
+              <summary>Это безопасно? Какие данные хранит лаунчер?</summary>
               <div class="faq__body">
-                Лаунчер работает с оффлайн-аккаунтом: достаточно придумать ник. Пароль от
-                Microsoft не запрашивается и не хранится. Поддержка официального входа
-                появится в следующих версиях.
+                Для оффлайн-профиля достаточно ника — пароль от Microsoft не запрашивается
+                и не хранится. Если создаёшь Welly ID, пароль сохраняется только в виде
+                Argon2id-хеша, а сессии защищены токенами. Скины и настройки остаются
+                на твоём компьютере.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Что такое Welly ID и нужен ли он?</summary>
+              <div class="faq__body">
+                Welly ID — отдельный аккаунт лаунчера, не связанный с Microsoft. Он нужен
+                для входа в профиль, подтверждения почты и восстановления пароля. Без него
+                можно играть на оффлайн-профиле. Welly ID не выдаёт лицензию Minecraft и не
+                подходит для серверов с <code>online-mode=true</code>.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Можно ли поменять тему и язык?</summary>
+              <div class="faq__body">
+                Да. В настройках доступны тёмная, светлая и системная темы, а также русский
+                и английский языки. Переключение применяется сразу, без перезапуска,
+                и сохраняется между запусками.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Скин сразу появится в игре?</summary>
+              <div class="faq__body">
+                Нет. Редактор сохраняет скин в библиотеку лаунчера и позволяет экспортировать
+                PNG. Автоматической загрузки скина на сервер или в игру пока нет — файл нужно
+                установить отдельно.
               </div>
             </details>
 
@@ -521,7 +691,7 @@
                 <span class="btn__icon" aria-hidden="true">⬇</span>
                 <span class="btn__stack">
                   <strong>Скачать Welly Launcher</strong>
-                  <small>Windows 10/11 • v0.3 • 71 МБ</small>
+                  <small>Windows 10/11 • v0.5</small>
                 </span>
               </a>
               <button class="btn btn--ghost btn--lg copy-ip" data-ip="wellyfun.x2mc.ru" type="button">
@@ -545,6 +715,7 @@
 
         <nav class="footer__links" aria-label="Ссылки в подвале">
           <a href="#features">Возможности</a>
+          <a href="#new">Что нового</a>
           <a href="#screenshots">Скриншоты</a>
           <a href="#install">Установка</a>
           <a href="#faq">FAQ</a>
@@ -552,8 +723,8 @@
         </nav>
 
         <p class="footer__legal">
-          © <span id="year">2026</span> WellyFun. Фанатский проект, не связан с Mojang Studios
-          или Microsoft. Minecraft — торговая марка Mojang Studios.
+          Welly Launcher v0.5 · © <span id="year">2026</span> WellyFun. Фанатский проект,
+          не связан с Mojang Studios или Microsoft. Minecraft — торговая марка Mojang Studios.
         </p>
       </div>
     </footer>
