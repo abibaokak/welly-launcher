@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Установка Welly Launcher 0.6 — скачать и начать играть</title>
+    <meta
+      name="description"
+      content="Как установить Welly Launcher 0.6: скачать WellyLauncher.exe, запустить без установки, обойти предупреждение SmartScreen и зайти на сервер WellyFun. Требования: Windows 10/11 x64 и интернет."
+    />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://abibaokak.github.io/welly-launcher/install.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Установка Welly Launcher 0.6" />
+    <meta
+      property="og:description"
+      content="Скачать, запустить, выбрать ник и версию — три шага до игры на WellyFun."
+    />
+    <meta property="og:image" content="assets/screenshots/home.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="orbs" aria-hidden="true">
+      <div class="orb orb--violet"></div>
+      <div class="orb orb--cyan"></div>
+      <div class="orb orb--gold"></div>
+      <div class="grid-dots"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Welly Launcher — на главную">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="46" height="46" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Minecraft • WellyFun</small>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="features.html">Возможности</a>
+          <a class="nav__link" href="loaders.html">Загрузчики</a>
+          <a class="nav__link" href="screenshots.html">Скриншоты</a>
+          <a class="nav__link" href="server.html">Сервер</a>
+          <a class="nav__link" href="install.html">Установка</a>
+          <a class="nav__link" href="faq.html">FAQ</a>
+          <a
+            class="nav__link nav__link--external"
+            href="https://donatesmp.mydonate.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            Магазин <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="header__actions">
+          <a
+            class="icon-link"
+            data-github
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Welly Launcher на GitHub"
+          >
+            <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+              />
+            </svg>
+          </a>
+          <a class="btn btn--gold btn--sm" data-download href="install.html">
+            <span class="btn__icon" aria-hidden="true">⬇</span>
+            Скачать
+          </a>
+          <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span>Установка</span>
+          </nav>
+          <p class="eyebrow">Три шага</p>
+          <h1 class="page-hero__title">Скачать<br /><span class="gradient-text">и играть</span></h1>
+          <p class="page-hero__lead">
+            Один файл <strong>WellyLauncher.exe</strong> для Windows 10 и 11. Установка не нужна —
+            запусти файл, и лаунчер сам скачает клиент, библиотеки и подходящую Java.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn btn--gold btn--lg" data-download href="install.html">
+              <span class="btn__icon" aria-hidden="true">⬇</span>
+              <span class="btn__stack">
+                <strong>Скачать лаунчер</strong>
+                <small>Windows 10/11 • v0.6</small>
+              </span>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="https://github.com/abibaokak/welly-launcher/releases">
+              Все релизы <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--after-hero">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Что нужно</p>
+            <h2 class="section__title">Требования</h2>
+            <p class="section__lead">Ничего доустанавливать заранее не нужно.</p>
+          </div>
+
+          <div class="req-list">
+            <div class="req reveal">
+              <span aria-hidden="true">🪟</span>
+              <div><b>Система</b>Windows 10 или 11, 64-бит</div>
+            </div>
+            <div class="req reveal">
+              <span aria-hidden="true">🌐</span>
+              <div><b>Интернет</b>Для скачивания клиента, Java и входа на сервер</div>
+            </div>
+            <div class="req reveal">
+              <span aria-hidden="true">💾</span>
+              <div><b>Место на диске</b>От 1 ГБ под лаунчер, Java и файлы игры</div>
+            </div>
+            <div class="req reveal">
+              <span aria-hidden="true">🧠</span>
+              <div><b>Память</b>От 4 ГБ ОЗУ; объём для игры меняется в настройках</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Порядок действий</p>
+            <h2 class="section__title">Как начать играть</h2>
+            <p class="section__lead">Скачивание, первый запуск и подключение к серверу.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="card step reveal">
+              <span class="step__num">01</span>
+              <span class="step__icon" aria-hidden="true">⬇</span>
+              <h3>Скачай лаунчер</h3>
+              <p>
+                Нажми «Скачать» — откроется последний релиз на GitHub, файл
+                <strong>WellyLauncher.exe</strong>. Сохрани его в удобную папку.
+              </p>
+              <a class="link-arrow" data-download href="install.html">К скачиванию <span aria-hidden="true">→</span></a>
+            </li>
+
+            <li class="card step reveal">
+              <span class="step__num">02</span>
+              <span class="step__icon" aria-hidden="true">🚀</span>
+              <h3>Запусти файл</h3>
+              <p>
+                Открой WellyLauncher.exe. Если Windows покажет SmartScreen — нажми
+                «Подробнее» → «Выполнить в любом случае».
+              </p>
+              <span class="step__note">Файл без платной цифровой подписи, поэтому Windows перестраховывается.</span>
+            </li>
+
+            <li class="card step reveal">
+              <span class="step__num">03</span>
+              <span class="step__icon" aria-hidden="true">🎮</span>
+              <h3>Выбери ник и версию</h3>
+              <p>
+                Введи ник или войди в Welly ID, выбери Minecraft и нажми «Играть на сервере».
+                Клиент и Java скачаются сами.
+              </p>
+              <span class="step__note">Первый запуск может занять несколько минут — это нормально.</span>
+            </li>
+          </ol>
+
+          <div class="callout-stack callout-stack--spaced">
+            <div class="callout callout--cyan reveal">
+              <span class="callout__icon" aria-hidden="true">🧳</span>
+              <div>
+                <strong>Portable.</strong> Лаунчер не прописывается в систему и не требует прав
+                администратора. Чтобы удалить — закрой его и удали файл; папку с игрой можно
+                убрать вручную.
+              </div>
+            </div>
+
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">🛡️</span>
+              <div>
+                <strong>Скачивай только с этой страницы.</strong> Официальные сборки лежат
+                на GitHub в разделе релизов. Если файл пришёл в личку или с файлообменника —
+                это не Welly Launcher.
+              </div>
+            </div>
+
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">📁</span>
+              <div>
+                <strong>Где лежат файлы.</strong> Клиент, библиотеки и Java хранятся в папке
+                лаунчера. Точный путь и занятое место показывает страница «Настройки».
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Первый запуск</p>
+            <h2 class="section__title">Что произойдёт дальше</h2>
+          </div>
+
+          <div class="callout-stack">
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">☕</span>
+              <div>
+                <strong>Java подберётся сама.</strong> Для выбранной версии Minecraft лаунчер
+                скачает совместимую Java 8–25. Уже установленная Java тоже подойдёт, если она
+                совместима.
+              </div>
+            </div>
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">📦</span>
+              <div>
+                <strong>Загрузчики — по желанию.</strong> Fabric, Forge и OptiFine ставятся
+                из панели выбранной версии. Подробности — на странице
+                <a class="link-inline" href="loaders.html">«Загрузчики»</a>.
+              </div>
+            </div>
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">🗕</span>
+              <div>
+                <strong>Лаунчер не помешает.</strong> Перед запуском игры окно свернётся
+                в панель задач и вернётся, когда Minecraft закроется. Это можно отключить
+                в настройках.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Дальше</p>
+            <h2 class="section__title">Куда посмотреть</h2>
+          </div>
+          <div class="next-links">
+            <a class="next-link reveal" href="loaders.html">
+              <span>Подробно</span>
+              <strong>Загрузчики</strong>
+              <em>Fabric, Forge и OptiFine</em>
+            </a>
+            <a class="next-link reveal" href="server.html">
+              <span>Сервер</span>
+              <strong>WellyFun</strong>
+              <em>Режимы и подключение</em>
+            </a>
+            <a class="next-link reveal" href="faq.html">
+              <span>Вопросы</span>
+              <strong>FAQ</strong>
+              <em>SmartScreen, Java, скины</em>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta__panel reveal">
+            <div class="cta__glow" aria-hidden="true"></div>
+            <p class="eyebrow">Готов?</p>
+            <h2 class="cta__title">Одна кнопка<br /><span class="gradient-text">до игры</span></h2>
+            <p class="cta__lead">Скачай Welly Launcher и окажись на WellyFun через пару минут.</p>
+            <div class="cta__actions">
+              <a class="btn btn--gold btn--lg" data-download href="install.html">
+                <span class="btn__icon" aria-hidden="true">⬇</span>
+                <span class="btn__stack">
+                  <strong>Скачать Welly Launcher</strong>
+                  <small>Windows 10/11 • v0.6</small>
+                </span>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="faq.html">Частые вопросы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="42" height="42" loading="lazy" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Играй. Строй. Сияй.</small>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Ссылки в подвале">
+          <a href="features.html">Возможности</a>
+          <a href="loaders.html">Загрузчики</a>
+          <a href="screenshots.html">Скриншоты</a>
+          <a href="server.html">Сервер</a>
+          <a href="install.html">Установка</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://donatesmp.mydonate.io/" target="_blank" rel="noopener">Сайт и магазин ↗</a>
+        </nav>
+
+        <p class="footer__legal">
+          Welly Launcher v0.6 · © <span id="year">2026</span> WellyFun. Фанатский проект,
+          не связан с Mojang Studios или Microsoft. Minecraft — торговая марка Mojang Studios.
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

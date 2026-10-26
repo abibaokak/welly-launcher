@@ -346,10 +346,17 @@
     refreshButton.addEventListener('click', () => loadStatus(true));
   }
 
-  loadStatus();
-  window.setInterval(() => {
-    if (!document.hidden) loadStatus();
-  }, 120000);
+  // Статус нужен только там, где на странице есть его элементы.
+  const statusEnabled = Boolean(
+    statusPill || serverCard || playersNodes.length || stateNodes.length
+  );
+
+  if (statusEnabled) {
+    loadStatus();
+    window.setInterval(() => {
+      if (!document.hidden) loadStatus();
+    }, 120000);
+  }
 
   /* ---------- Header / mobile navigation ---------- */
 
@@ -387,30 +394,18 @@
     });
   }
 
-  /* ---------- Scroll spy ---------- */
+  /* ---------- Active page in navigation ---------- */
 
-  const navLinks = $$('.nav__link');
-  const sections = navLinks
-    .map((link) => {
-      const id = link.getAttribute('href')?.slice(1);
-      return id ? document.getElementById(id) : null;
-    })
-    .filter(Boolean);
+  const currentPage = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
-  if ('IntersectionObserver' in window && sections.length) {
-    const spy = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          navLinks.forEach((link) => {
-            link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`);
-          });
-        });
-      },
-      { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
-    );
-    sections.forEach((section) => spy.observe(section));
-  }
+  $$('.nav__link').forEach((link) => {
+    const href = (link.getAttribute('href') || '').split('#')[0].toLowerCase();
+    if (!href || /^(https?:|mailto:|tel:)/.test(href)) return;
+    if (href === currentPage) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
 
   /* ---------- Reveal on scroll ---------- */
 

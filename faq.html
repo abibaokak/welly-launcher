@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ — Welly Launcher 0.6: Java, скины, Welly ID и SmartScreen</title>
+    <meta
+      name="description"
+      content="Частые вопросы о Welly Launcher 0.6: безопасность, Welly ID, Java, скины, SmartScreen, поддерживаемые версии Minecraft, Fabric/Forge/OptiFine и сворачивание лаунчера во время игры."
+    />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://abibaokak.github.io/welly-launcher/faq.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FAQ — Welly Launcher 0.6" />
+    <meta
+      property="og:description"
+      content="Коротко о том, что чаще всего спрашивают перед первым запуском."
+    />
+    <meta property="og:image" content="assets/screenshots/home.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="orbs" aria-hidden="true">
+      <div class="orb orb--violet"></div>
+      <div class="orb orb--cyan"></div>
+      <div class="orb orb--gold"></div>
+      <div class="grid-dots"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Welly Launcher — на главную">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="46" height="46" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Minecraft • WellyFun</small>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="features.html">Возможности</a>
+          <a class="nav__link" href="loaders.html">Загрузчики</a>
+          <a class="nav__link" href="screenshots.html">Скриншоты</a>
+          <a class="nav__link" href="server.html">Сервер</a>
+          <a class="nav__link" href="install.html">Установка</a>
+          <a class="nav__link" href="faq.html">FAQ</a>
+          <a
+            class="nav__link nav__link--external"
+            href="https://donatesmp.mydonate.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            Магазин <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="header__actions">
+          <a
+            class="icon-link"
+            data-github
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Welly Launcher на GitHub"
+          >
+            <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+              />
+            </svg>
+          </a>
+          <a class="btn btn--gold btn--sm" data-download href="install.html">
+            <span class="btn__icon" aria-hidden="true">⬇</span>
+            Скачать
+          </a>
+          <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span>FAQ</span>
+          </nav>
+          <p class="eyebrow">Вопросы</p>
+          <h1 class="page-hero__title">FAQ</h1>
+          <p class="page-hero__lead">
+            Коротко о том, что чаще всего спрашивают перед первым запуском:
+            безопасность, Welly ID, Java, скины, загрузчики и SmartScreen.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--after-hero">
+        <div class="container faq">
+          <div class="faq__intro reveal">
+            <p class="eyebrow">Перед стартом</p>
+            <h2 class="section__title">Частые вопросы</h2>
+            <p class="section__lead">
+              Если ответа нет — загляни на сайт сервера: там магазин, чат и правила.
+            </p>
+            <div class="faq__help card">
+              <span aria-hidden="true">💬</span>
+              <p>Не нашёл ответ? На сайте сервера есть чат, магазин и правила WellyFun.</p>
+              <a class="link-arrow" href="https://donatesmp.mydonate.io/" target="_blank" rel="noopener">
+                donatesmp.mydonate.io <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="faq__list">
+            <details class="faq__item reveal" open>
+              <summary>Это безопасно? Какие данные хранит лаунчер?</summary>
+              <div class="faq__body">
+                Для оффлайн-профиля достаточно ника — пароль от Microsoft не запрашивается
+                и не хранится. Если создашь Welly ID, пароль сохраняется только в виде
+                Argon2id-хеша, а сессии защищены токенами. Скины и настройки остаются
+                на твоём компьютере.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Что такое Welly ID и нужен ли он?</summary>
+              <div class="faq__body">
+                Welly ID — отдельный аккаунт лаунчера, не связанный с Microsoft. Он нужен
+                для входа в профиль, подтверждения почты и восстановления пароля. Без него
+                можно играть на оффлайн-профиле. Для входа нужен развёрнутый сервер
+                аккаунтов — без него Welly ID недоступен. Welly ID не выдаёт лицензию
+                Minecraft и не подходит для серверов с <code>online-mode=true</code>.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Можно ли поменять тему и язык?</summary>
+              <div class="faq__body">
+                Да. В настройках доступны тёмная, светлая и системная темы, а также русский
+                и английский языки. Переключение применяется сразу, без перезапуска,
+                и сохраняется между запусками.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Скин сразу появится в игре?</summary>
+              <div class="faq__body">
+                Нет. Редактор сохраняет скин в библиотеку лаунчера и позволяет экспортировать
+                PNG. Автоматической загрузки скина на сервер или в игру пока нет — файл нужно
+                установить отдельно.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Нужно ли устанавливать Java?</summary>
+              <div class="faq__body">
+                Нет. Лаунчер сам подберёт и скачает подходящую Java 8–25 для выбранной
+                версии Minecraft. Уже установленная Java тоже подойдёт, если она совместима.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Windows пишет «Неизвестный издатель». Это вирус?</summary>
+              <div class="faq__body">
+                Нет. У файла нет платной цифровой подписи, поэтому SmartScreen показывает
+                предупреждение. Нажми «Подробнее» → «Выполнить в любом случае». Скачивай
+                лаунчер только со страницы релизов этого сайта.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Какие версии Minecraft поддерживаются?</summary>
+              <div class="faq__body">
+                От Alpha до 26.3 — всего 920 версий, включая популярные 1.8.9, 1.12.2,
+                1.16.5, 1.20.1, 1.21.11 и 26.3. Сервер принимает подключения с 1.7.2 по 26.2.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Куда скачиваются файлы игры?</summary>
+              <div class="faq__body">
+                В папку лаунчера. Путь и объём можно посмотреть в настройках. Клиент,
+                библиотеки и ассеты скачиваются один раз и переиспользуются для всех версий.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Как поставить Fabric, Forge или OptiFine?</summary>
+              <div class="faq__body">
+                Выбери версию Minecraft на странице «Версии» — внизу появится панель
+                загрузчиков. Выбери сборку и нажми «Установить». Лаунчер скачает официальные
+                файлы и соберёт отдельную версию, не трогая ванильную. Подробнее — на странице
+                <a class="link-inline" href="loaders.html">«Загрузчики»</a>.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Лаунчер сворачивается при запуске игры. Так и должно быть?</summary>
+              <div class="faq__body">
+                Да, это новая функция 0.6: перед запуском Minecraft окно сворачивается
+                в панель задач и возвращается, когда игра закрывается. Крестик во время игры
+                не выключает игру. Поведение можно отключить в настройках.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Лаунчер официальный?</summary>
+              <div class="faq__body">
+                Это фанатский проект для сервера WellyFun. Он не связан с Mojang Studios
+                или Microsoft. Minecraft — торговая марка Mojang Studios.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Дальше</p>
+            <h2 class="section__title">Куда посмотреть</h2>
+          </div>
+          <div class="next-links">
+            <a class="next-link reveal" href="install.html">
+              <span>Старт</span>
+              <strong>Установка</strong>
+              <em>Скачать и запустить</em>
+            </a>
+            <a class="next-link reveal" href="loaders.html">
+              <span>Подробно</span>
+              <strong>Загрузчики</strong>
+              <em>Fabric, Forge и OptiFine</em>
+            </a>
+            <a class="next-link reveal" href="server.html">
+              <span>Сервер</span>
+              <strong>WellyFun</strong>
+              <em>Режимы и подключение</em>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta__panel reveal">
+            <div class="cta__glow" aria-hidden="true"></div>
+            <p class="eyebrow">Всё готово</p>
+            <h2 class="cta__title">Осталось<br /><span class="gradient-text">скачать</span></h2>
+            <p class="cta__lead">Windows 10/11, без установки. Первый запуск настроит всё сам.</p>
+            <div class="cta__actions">
+              <a class="btn btn--gold btn--lg" data-download href="install.html">
+                <span class="btn__icon" aria-hidden="true">⬇</span>
+                <span class="btn__stack">
+                  <strong>Скачать Welly Launcher</strong>
+                  <small>Windows 10/11 • v0.6</small>
+                </span>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="server.html">Сервер WellyFun</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="42" height="42" loading="lazy" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Играй. Строй. Сияй.</small>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Ссылки в подвале">
+          <a href="features.html">Возможности</a>
+          <a href="loaders.html">Загрузчики</a>
+          <a href="screenshots.html">Скриншоты</a>
+          <a href="server.html">Сервер</a>
+          <a href="install.html">Установка</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://donatesmp.mydonate.io/" target="_blank" rel="noopener">Сайт и магазин ↗</a>
+        </nav>
+
+        <p class="footer__legal">
+          Welly Launcher v0.6 · © <span id="year">2026</span> WellyFun. Фанатский проект,
+          не связан с Mojang Studios или Microsoft. Minecraft — торговая марка Mojang Studios.
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

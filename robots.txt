@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abibaokak.github.io/welly-launcher/sitemap.xml

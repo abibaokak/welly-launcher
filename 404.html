@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — страница не найдена | Welly Launcher</title>
+    <meta name="description" content="Такой страницы нет. Вернись на главную Welly Launcher или скачай лаунчер." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark" />
+
+    <link rel="icon" href="/welly-launcher/assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/welly-launcher/assets/logo.png" />
+    <link rel="apple-touch-icon" href="/welly-launcher/assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/welly-launcher/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="orbs" aria-hidden="true">
+      <div class="orb orb--violet"></div>
+      <div class="orb orb--cyan"></div>
+      <div class="orb orb--gold"></div>
+      <div class="grid-dots"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="/welly-launcher/" aria-label="Welly Launcher — на главную">
+          <img class="brand__logo" src="/welly-launcher/assets/logo.png" alt="" width="46" height="46" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Minecraft • WellyFun</small>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="/welly-launcher/features.html">Возможности</a>
+          <a class="nav__link" href="/welly-launcher/loaders.html">Загрузчики</a>
+          <a class="nav__link" href="/welly-launcher/screenshots.html">Скриншоты</a>
+          <a class="nav__link" href="/welly-launcher/server.html">Сервер</a>
+          <a class="nav__link" href="/welly-launcher/install.html">Установка</a>
+          <a class="nav__link" href="/welly-launcher/faq.html">FAQ</a>
+          <a
+            class="nav__link nav__link--external"
+            href="https://donatesmp.mydonate.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            Магазин <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="header__actions">
+          <a class="btn btn--gold btn--sm" href="/welly-launcher/install.html">
+            <span class="btn__icon" aria-hidden="true">⬇</span>
+            Скачать
+          </a>
+          <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="error-page">
+        <div class="container">
+          <p class="eyebrow">Упс</p>
+          <p class="error-page__code gradient-text">404</p>
+          <h1 class="page-hero__title">Страница<br />не найдена</h1>
+          <p class="error-page__lead">
+            Возможно, ссылка устарела или в адресе опечатка. Начни с главной — там
+            всё, что нужно.
+          </p>
+          <div class="error-page__actions">
+            <a class="btn btn--gold btn--lg" href="/welly-launcher/">На главную</a>
+            <a class="btn btn--ghost btn--lg" href="/welly-launcher/install.html">Скачать лаунчер</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo" src="/welly-launcher/assets/logo.png" alt="" width="42" height="42" loading="lazy" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Играй. Строй. Сияй.</small>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Ссылки в подвале">
+          <a href="/welly-launcher/features.html">Возможности</a>
+          <a href="/welly-launcher/loaders.html">Загрузчики</a>
+          <a href="/welly-launcher/screenshots.html">Скриншоты</a>
+          <a href="/welly-launcher/server.html">Сервер</a>
+          <a href="/welly-launcher/install.html">Установка</a>
+          <a href="/welly-launcher/faq.html">FAQ</a>
+          <a href="https://donatesmp.mydonate.io/" target="_blank" rel="noopener">Сайт и магазин ↗</a>
+        </nav>
+
+        <p class="footer__legal">
+          Welly Launcher v0.6 · © <span id="year">2026</span> WellyFun. Фанатский проект,
+          не связан с Mojang Studios или Microsoft. Minecraft — торговая марка Mojang Studios.
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/welly-launcher/script.js" defer></script>
+  </body>
+</html>

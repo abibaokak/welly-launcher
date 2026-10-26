@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Загрузчики Fabric, Forge и OptiFine — Welly Launcher 0.6</title>
+    <meta
+      name="description"
+      content="Как Welly Launcher ставит Fabric, Forge и OptiFine: официальные файлы, отдельные сборки для каждой версии Minecraft, рекомендуемая версия загрузчика и запуск в один клик."
+    />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://abibaokak.github.io/welly-launcher/loaders.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Загрузчики Fabric, Forge и OptiFine — Welly Launcher" />
+    <meta
+      property="og:description"
+      content="Выбрал версию Minecraft — поставил Fabric, Forge или OptiFine в один клик. Настоящая установка, отдельные сборки."
+    />
+    <meta property="og:image" content="assets/screenshots/versions-loaders.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="orbs" aria-hidden="true">
+      <div class="orb orb--violet"></div>
+      <div class="orb orb--cyan"></div>
+      <div class="orb orb--gold"></div>
+      <div class="grid-dots"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Welly Launcher — на главную">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="46" height="46" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Minecraft • WellyFun</small>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="features.html">Возможности</a>
+          <a class="nav__link" href="loaders.html">Загрузчики</a>
+          <a class="nav__link" href="screenshots.html">Скриншоты</a>
+          <a class="nav__link" href="server.html">Сервер</a>
+          <a class="nav__link" href="install.html">Установка</a>
+          <a class="nav__link" href="faq.html">FAQ</a>
+          <a
+            class="nav__link nav__link--external"
+            href="https://donatesmp.mydonate.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            Магазин <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="header__actions">
+          <a
+            class="icon-link"
+            data-github
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Welly Launcher на GitHub"
+          >
+            <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+              />
+            </svg>
+          </a>
+          <a class="btn btn--gold btn--sm" data-download href="install.html">
+            <span class="btn__icon" aria-hidden="true">⬇</span>
+            Скачать
+          </a>
+          <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span>Загрузчики</span>
+          </nav>
+          <p class="eyebrow">Fabric • Forge • OptiFine</p>
+          <h1 class="page-hero__title">Загрузчики<br /><span class="gradient-text">в один клик</span></h1>
+          <p class="page-hero__lead">
+            Выбрал версию Minecraft — в панели появились кнопки Fabric, Forge и OptiFine.
+            Лаунчер скачает официальные файлы, соберёт отдельную версию и запустит её
+            как обычную сборку.
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn btn--gold btn--lg" data-download href="install.html">
+              <span class="btn__icon" aria-hidden="true">⬇</span>
+              <span class="btn__stack">
+                <strong>Скачать лаунчер</strong>
+                <small>Windows 10/11 • v0.6</small>
+              </span>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="screenshots.html">Смотреть скриншоты</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--after-hero">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Три загрузчика</p>
+            <h2 class="section__title">Что можно поставить</h2>
+            <p class="section__lead">
+              Список сборок подтягивается под выбранную версию Minecraft, рекомендуемая
+              уже отмечена — остаётся нажать «Установить».
+            </p>
+          </div>
+
+          <div class="loader-cards">
+            <article class="card loader-card reveal">
+              <div class="loader-card__head">
+                <span class="loader-card__icon" aria-hidden="true">🧵</span>
+                <h3>Fabric</h3>
+              </div>
+              <p>Лёгкий загрузчик модов и оптимизаций. Ставится профилем, без отдельного инсталлятора.</p>
+              <ul class="loader-card__list">
+                <li>Профиль Fabric с библиотеками из официальной меты</li>
+                <li>Своя версия в списке — рядом с ванильной</li>
+                <li>Быстрый старт и минимум лишних файлов</li>
+              </ul>
+              <p class="loader-card__meta">fabric-loader • версия под выбранный Minecraft</p>
+            </article>
+
+            <article class="card loader-card reveal">
+              <div class="loader-card__head">
+                <span class="loader-card__icon" aria-hidden="true">🔨</span>
+                <h3>Forge</h3>
+              </div>
+              <p>Классический загрузчик модов для больших сборок и старых версий Minecraft.</p>
+              <ul class="loader-card__list">
+                <li>Официальный Forge installer, запуск на нужной Java</li>
+                <li>Рекомендуемая и последняя версии Forge</li>
+                <li>Сборка запускается со звуком, мирами и модами</li>
+              </ul>
+              <p class="loader-card__meta">Minecraft Forge • установка через --installClient</p>
+            </article>
+
+            <article class="card loader-card reveal">
+              <div class="loader-card__head">
+                <span class="loader-card__icon" aria-hidden="true">✨</span>
+                <h3>OptiFine</h3>
+              </div>
+              <p>Шейдеры и оптимизация графики. Ставится патчером OptiFine поверх выбранной версии.</p>
+              <ul class="loader-card__list">
+                <li>Скачивание сборки с optifine.net</li>
+                <li>Патчинг через optifine.Patcher и launchwrapper</li>
+                <li>Несколько сборок на выбор — например, HD U I6 и I5</li>
+              </ul>
+              <p class="loader-card__meta">OptiFine • отдельная версия в списке</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Порядок действий</p>
+            <h2 class="section__title">Как поставить загрузчик</h2>
+            <p class="section__lead">Всё в том же окне, где выбираешь версию Minecraft.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="card step reveal">
+              <span class="step__num">01</span>
+              <span class="step__icon" aria-hidden="true">🎮</span>
+              <h3>Выбери версию Minecraft</h3>
+              <p>На странице «Версии» найди нужную версию в списке и нажми на неё.</p>
+              <span class="step__note">Если ванильной версии ещё нет, лаунчер скачает её вместе с библиотеками.</span>
+            </li>
+
+            <li class="card step reveal">
+              <span class="step__num">02</span>
+              <span class="step__icon" aria-hidden="true">🧰</span>
+              <h3>Выбери загрузчик и сборку</h3>
+              <p>Fabric, Forge или OptiFine — и нужную версию загрузчика в списке.</p>
+              <span class="step__note">Рекомендуемая сборка выбрана заранее, менять её не обязательно.</span>
+            </li>
+
+            <li class="card step reveal">
+              <span class="step__num">03</span>
+              <span class="step__icon" aria-hidden="true">🚀</span>
+              <h3>Установи и играй</h3>
+              <p>Одна кнопка — установка. Готово: кнопка меняется на «Играть», сборка появляется в списке версий.</p>
+              <span class="step__note">Прогресс виден внизу окна, установку можно отменить.</span>
+            </li>
+          </ol>
+
+          <div class="callout-stack callout-stack--spaced">
+            <div class="callout callout--cyan">
+              <span class="callout__icon" aria-hidden="true">🧩</span>
+              <div>
+                <strong>Это не заглушки.</strong> Fabric ставится профилем, Forge — официальным
+                инсталлятором, OptiFine — патчером. Каждая сборка занимает свою папку
+                в <code>versions</code> и не ломает ванильную версию.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <figure class="figure-card reveal">
+            <img
+              src="assets/screenshots/versions-loaders.png"
+              alt="Панель загрузчиков в Welly Launcher: Fabric, Forge и OptiFine для Minecraft 1.20.1"
+              loading="lazy"
+              width="1224"
+              height="781"
+            />
+            <figcaption>
+              Панель загрузчиков для Minecraft 1.20.1: три вкладки, рекомендуемая сборка
+              и кнопка установки.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Без сюрпризов</p>
+            <h2 class="section__title">Что важно знать</h2>
+          </div>
+
+          <div class="callout-stack">
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">📦</span>
+              <div>
+                <strong>Отдельные сборки.</strong> Загрузчик не заменяет ванильную версию:
+                рядом появляется новая, например <code>1.20.1-forge-47.4.28</code> или
+                <code>fabric-loader-0.20.1-1.20.1</code>. Запускать можно любую.
+              </div>
+            </div>
+
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">🗂️</span>
+              <div>
+                <strong>Моды — вручную.</strong> Менеджера модов пока нет: файлы <code>.jar</code>
+                кладутся в папку <code>mods</code> выбранной сборки. Лаунчер ставит сам загрузчик,
+                а не подбирает моды.
+              </div>
+            </div>
+
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">🌐</span>
+              <div>
+                <strong>Официальные источники.</strong> Fabric — из меты Fabric, Forge — из Maven
+                MinecraftForge, OptiFine — с optifine.net. Сторонних сборок лаунчер не подсовывает.
+              </div>
+            </div>
+
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">🧪</span>
+              <div>
+                <strong>Проверено на 1.20.1.</strong> Fabric 0.20.1, Forge 47.4.28 и OptiFine
+                HD U I6 запускаются до окна игры. Для других версий список сборок формируется
+                автоматически — если загрузчик версию не поддерживает, кнопка честно скажет об этом.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Дальше</p>
+            <h2 class="section__title">Куда посмотреть</h2>
+          </div>
+          <div class="next-links">
+            <a class="next-link reveal" href="features.html">
+              <span>Обзор</span>
+              <strong>Возможности</strong>
+              <em>Что ещё умеет лаунчер</em>
+            </a>
+            <a class="next-link reveal" href="screenshots.html">
+              <span>Галерея</span>
+              <strong>Скриншоты</strong>
+              <em>Экраны лаунчера версии 0.6</em>
+            </a>
+            <a class="next-link reveal" href="faq.html">
+              <span>Вопросы</span>
+              <strong>FAQ</strong>
+              <em>Моды, скины, Java и SmartScreen</em>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta__panel reveal">
+            <div class="cta__glow" aria-hidden="true"></div>
+            <p class="eyebrow">Готово к сборке</p>
+            <h2 class="cta__title">Поставь загрузчик<br /><span class="gradient-text">за один клик</span></h2>
+            <p class="cta__lead">Скачай лаунчер, выбери версию Minecraft и нужный загрузчик.</p>
+            <div class="cta__actions">
+              <a class="btn btn--gold btn--lg" data-download href="install.html">
+                <span class="btn__icon" aria-hidden="true">⬇</span>
+                <span class="btn__stack">
+                  <strong>Скачать Welly Launcher</strong>
+                  <small>Windows 10/11 • v0.6</small>
+                </span>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="install.html">Как установить</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="42" height="42" loading="lazy" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Играй. Строй. Сияй.</small>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Ссылки в подвале">
+          <a href="features.html">Возможности</a>
+          <a href="loaders.html">Загрузчики</a>
+          <a href="screenshots.html">Скриншоты</a>
+          <a href="server.html">Сервер</a>
+          <a href="install.html">Установка</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://donatesmp.mydonate.io/" target="_blank" rel="noopener">Сайт и магазин ↗</a>
+        </nav>
+
+        <p class="footer__legal">
+          Welly Launcher v0.6 · © <span id="year">2026</span> WellyFun. Фанатский проект,
+          не связан с Mojang Studios или Microsoft. Minecraft — торговая марка Mojang Studios.
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

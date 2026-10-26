@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Возможности Welly Launcher 0.6 — версии, Java, темы, скины</title>
+    <meta
+      name="description"
+      content="Что умеет Welly Launcher 0.6: 920 версий Minecraft, автоматическая Java 8–25, Fabric/Forge/OptiFine, три темы, RU/EN, 3D-редактор скинов, Welly ID, portable-запуск и живой статус сервера."
+    />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://abibaokak.github.io/welly-launcher/features.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Возможности Welly Launcher 0.6" />
+    <meta
+      property="og:description"
+      content="920 версий, авто-Java, Fabric/Forge/OptiFine, темы, RU/EN, 3D-редактор скинов и Welly ID."
+    />
+    <meta property="og:image" content="assets/screenshots/home.png" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="orbs" aria-hidden="true">
+      <div class="orb orb--violet"></div>
+      <div class="orb orb--cyan"></div>
+      <div class="orb orb--gold"></div>
+      <div class="grid-dots"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="index.html" aria-label="Welly Launcher — на главную">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="46" height="46" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Minecraft • WellyFun</small>
+          </span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Основная навигация">
+          <a class="nav__link" href="features.html">Возможности</a>
+          <a class="nav__link" href="loaders.html">Загрузчики</a>
+          <a class="nav__link" href="screenshots.html">Скриншоты</a>
+          <a class="nav__link" href="server.html">Сервер</a>
+          <a class="nav__link" href="install.html">Установка</a>
+          <a class="nav__link" href="faq.html">FAQ</a>
+          <a
+            class="nav__link nav__link--external"
+            href="https://donatesmp.mydonate.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            Магазин <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+
+        <div class="header__actions">
+          <a
+            class="icon-link"
+            data-github
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Welly Launcher на GitHub"
+          >
+            <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"
+              />
+            </svg>
+          </a>
+          <a class="btn btn--gold btn--sm" data-download href="install.html">
+            <span class="btn__icon" aria-hidden="true">⬇</span>
+            Скачать
+          </a>
+          <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container page-hero__inner">
+          <nav class="crumbs" aria-label="Хлебные крошки">
+            <a href="index.html">Главная</a>
+            <span aria-hidden="true">/</span>
+            <span>Возможности</span>
+          </nav>
+          <p class="eyebrow">Всё уже внутри</p>
+          <h1 class="page-hero__title">Меньше настройки.<br /><span class="gradient-text">Больше игры.</span></h1>
+          <p class="page-hero__lead">
+            Один лаунчер вместо десяти программ, инструкций и поисков нужной Java.
+            Три темы, два языка, скины в 3D и аккаунт Welly ID — рядом с кнопкой «Играть».
+          </p>
+          <div class="page-hero__actions">
+            <a class="btn btn--gold btn--lg" data-download href="install.html">
+              <span class="btn__icon" aria-hidden="true">⬇</span>
+              <span class="btn__stack">
+                <strong>Скачать лаунчер</strong>
+                <small>Windows 10/11 • v0.6</small>
+              </span>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="screenshots.html">Посмотреть скриншоты</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--after-hero">
+        <div class="container">
+          <div class="features">
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--violet" aria-hidden="true">🧩</span>
+              <h3>920 версий</h3>
+              <p>От Alpha до 26.3. Выбирай любую — лаунчер сам скачает клиент, библиотеки и ассеты.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--gold" aria-hidden="true">☕</span>
+              <h3>Java сама</h3>
+              <p>Подходящая Java 8–25 находится и скачивается автоматически. Никаких настроек.</p>
+            </article>
+
+            <article class="card feature feature--accent reveal">
+              <span class="feature__tag">Новое</span>
+              <span class="feature__icon feature__icon--cyan" aria-hidden="true">🪪</span>
+              <h3>Welly ID</h3>
+              <p>Отдельный аккаунт лаунчера, не Microsoft. Пароль хранится только в виде Argon2id-хеша.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__tag">Новое</span>
+              <span class="feature__icon feature__icon--pink" aria-hidden="true">🎨</span>
+              <h3>Скины в 3D</h3>
+              <p>Редактор 64×64 со слоями Steve и Alex, импортом и экспортом PNG и библиотекой скинов.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__tag">Новое</span>
+              <span class="feature__icon feature__icon--blue" aria-hidden="true">🌗</span>
+              <h3>Темы и язык</h3>
+              <p>Тёмная, светлая или системная тема. Русский и английский переключаются без перезапуска.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--gold" aria-hidden="true">🧵</span>
+              <h3>Fabric, Forge, OptiFine</h3>
+              <p>Выбери версию Minecraft — и поставь загрузчик в один клик. Каждая сборка запускается отдельно.</p>
+              <p class="feature__more"><a class="link-arrow" href="loaders.html">Подробнее <span aria-hidden="true">→</span></a></p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__tag">Новое</span>
+              <span class="feature__icon feature__icon--violet" aria-hidden="true">🗕</span>
+              <h3>Не мешает игре</h3>
+              <p>Перед запуском Minecraft лаунчер сворачивается и сам возвращается, когда игра закрывается.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--pink" aria-hidden="true">⚡</span>
+              <h3>В один клик</h3>
+              <p>«Играть на сервере» запускает Minecraft, подключает к wellyfun.x2mc.ru и убирает лаунчер с экрана.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--blue" aria-hidden="true">📡</span>
+              <h3>Живой статус</h3>
+              <p>Онлайн сервера, свежие новости и описания версий прямо на главной лаунчера.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--lime" aria-hidden="true">🧳</span>
+              <h3>Portable</h3>
+              <p>Один exe без установки. Ярлык на рабочий стол создаётся в настройках за секунду.</p>
+            </article>
+
+            <article class="card feature reveal">
+              <span class="feature__icon feature__icon--cyan" aria-hidden="true">🎭</span>
+              <h3>Без пароля</h3>
+              <p>Оффлайн-профиль: ввёл ник — и играешь. Пароль от Microsoft не нужен.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="new">
+        <div class="container">
+          <div class="section__head section__head--row reveal">
+            <div>
+              <p class="eyebrow">Версия 0.6</p>
+              <h2 class="section__title">Что нового<br />в 0.6</h2>
+              <p class="section__lead">
+                Fabric, Forge и OptiFine в один клик — плюс лаунчер, который больше не мешает игре.
+              </p>
+            </div>
+            <span class="version-badge">v0.6.0</span>
+          </div>
+
+          <div class="new-grid">
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/versions-loaders.png"
+                  alt="Выбор загрузчика Fabric, Forge или OptiFine в Welly Launcher"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Загрузчики</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Fabric, Forge и OptiFine</h3>
+                <p>
+                  Выбери версию Minecraft — в панели появятся кнопки загрузчиков
+                  с рекомендуемой и другими сборками.
+                </p>
+                <ul class="new-card__list">
+                  <li>Настоящая установка через официальные файлы</li>
+                  <li>Готовые сборки запускаются как обычные версии</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/settings.png"
+                  alt="Настройка сворачивания лаунчера во время игры"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Поведение</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Лаунчер уходит с экрана</h3>
+                <p>
+                  При запуске Minecraft окно сворачивается в панель задач и возвращается,
+                  когда игра закрывается.
+                </p>
+                <ul class="new-card__list">
+                  <li>Крестик во время игры не выключает игру</li>
+                  <li>Можно отключить в настройках</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/home-light.png"
+                  alt="Главная страница Welly Launcher в светлой теме"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Темы</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Тёмная, светлая, системная</h3>
+                <p>
+                  Тема применяется сразу и запоминается между запусками — без вспышки
+                  белого экрана при старте.
+                </p>
+                <ul class="new-card__list">
+                  <li>Русский и английский без перезапуска</li>
+                  <li>Контраст проверен в обеих темах</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/skin.png"
+                  alt="3D-редактор скинов в Welly Launcher"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Скины</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Редактор скинов 64×64</h3>
+                <p>
+                  Рисуй прямо в лаунчере: базовый и внешний слой, модели Steve и Alex,
+                  сетка, пипетка и масштаб.
+                </p>
+                <ul class="new-card__list">
+                  <li>Импорт и экспорт PNG</li>
+                  <li>Своя библиотека скинов и undo/redo</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="card new-card reveal">
+              <div class="new-card__media">
+                <img
+                  src="assets/screenshots/account.png"
+                  alt="Страница аккаунта Welly ID в лаунчере"
+                  loading="lazy"
+                  width="1224"
+                  height="781"
+                />
+                <span class="new-card__badge">Аккаунт</span>
+              </div>
+              <div class="new-card__body">
+                <h3>Welly ID</h3>
+                <p>
+                  Отдельный аккаунт лаунчера: регистрация по почте, подтверждение,
+                  восстановление пароля и профиль.
+                </p>
+                <ul class="new-card__list">
+                  <li>Argon2id и защита от перебора</li>
+                  <li>Безопасные токены сессий и HTTPS</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head reveal">
+            <p class="eyebrow">Дальше</p>
+            <h2 class="section__title">Куда посмотреть</h2>
+          </div>
+          <div class="next-links">
+            <a class="next-link reveal" href="loaders.html">
+              <span>Подробно</span>
+              <strong>Загрузчики</strong>
+              <em>Fabric, Forge и OptiFine: как это работает</em>
+            </a>
+            <a class="next-link reveal" href="screenshots.html">
+              <span>Галерея</span>
+              <strong>Скриншоты</strong>
+              <em>Все экраны лаунчера версии 0.6</em>
+            </a>
+            <a class="next-link reveal" href="install.html">
+              <span>Старт</span>
+              <strong>Установка</strong>
+              <em>Три шага до первой игры</em>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta__panel reveal">
+            <div class="cta__glow" aria-hidden="true"></div>
+            <p class="eyebrow">WellyFun ждёт</p>
+            <h2 class="cta__title">Готов залететь<br /><span class="gradient-text">на сервер?</span></h2>
+            <p class="cta__lead">Скачай лаунчер, придумай ник и окажись в игре через пару минут.</p>
+            <div class="cta__actions">
+              <a class="btn btn--gold btn--lg" data-download href="install.html">
+                <span class="btn__icon" aria-hidden="true">⬇</span>
+                <span class="btn__stack">
+                  <strong>Скачать Welly Launcher</strong>
+                  <small>Windows 10/11 • v0.6</small>
+                </span>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="faq.html">Частые вопросы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__inner">
+        <div class="brand brand--footer">
+          <img class="brand__logo" src="assets/logo.png" alt="" width="42" height="42" loading="lazy" />
+          <span class="brand__text">
+            <strong>Welly Launcher</strong>
+            <small>Играй. Строй. Сияй.</small>
+          </span>
+        </div>
+
+        <nav class="footer__links" aria-label="Ссылки в подвале">
+          <a href="features.html">Возможности</a>
+          <a href="loaders.html">Загрузчики</a>
+          <a href="screenshots.html">Скриншоты</a>
+          <a href="server.html">Сервер</a>
+          <a href="install.html">Установка</a>
+          <a href="faq.html">FAQ</a>
+          <a href="https://donatesmp.mydonate.io/" target="_blank" rel="noopener">Сайт и магазин ↗</a>
+        </nav>
+
+        <p class="footer__legal">
+          Welly Launcher v0.6 · © <span id="year">2026</span> WellyFun. Фанатский проект,
+          не связан с Mojang Studios или Microsoft. Minecraft — торговая марка Mojang Studios.
+        </p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
