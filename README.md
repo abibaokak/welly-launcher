@@ -2,7 +2,7 @@
 
 Многостраничный сайт лаунчера на русском: главная, возможности, загрузчики,
 скриншоты, сервер, установка и FAQ. Сайт описывает актуальную версию **0.6**:
-Fabric, Forge и OptiFine, сворачивание лаунчера на время игры, тёмную, светлую
+Fabric, Quilt, Forge, NeoForge и OptiFine, сворачивание лаунчера на время игры, тёмную, светлую
 и системную темы, RU/EN, 3D-редактор скинов и аккаунт Welly ID.
 
 - Чистый HTML + CSS + JS, без сборки. Общие `styles.css` и `script.js` для всех
@@ -31,7 +31,7 @@ Fabric, Forge и OptiFine, сворачивание лаунчера на вре
 ```
 index.html                  главная: hero, что нового, короткий список возможностей
 features.html               все возможности и блок «Что нового в 0.6»
-loaders.html                Fabric, Forge, OptiFine: как ставить и что важно знать
+loaders.html                Fabric, Quilt, Forge, NeoForge, OptiFine: как ставить и что важно знать
 screenshots.html            галерея скриншотов с лайтбоксом
 server.html                 сервер WellyFun, статус, режимы и подключение
 install.html                требования, три шага установки, SmartScreen
