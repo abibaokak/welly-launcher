@@ -35,7 +35,7 @@
   }
 
   const repo = resolveRepo();
-  const releaseUrl = `https://github.com/${repo.owner}/${repo.repo}/WellyLauncher.exe?t=20261027125724`;
+  const releaseUrl = `WellyLauncher.exe?t=${Date.now()}`;
 
   $$('[data-download]').forEach((link) => {
     link.href = releaseUrl;
