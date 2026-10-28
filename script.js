@@ -35,13 +35,23 @@
   }
 
   const repo = resolveRepo();
-  const releaseUrl = `WellyLauncher.exe?t=${Date.now()}`;
+  const DOWNLOAD_FILE = 'WellyLauncher-Setup-1.0.0.exe';
+  const PORTABLE_FILE = 'WellyLauncher.exe';
+  const releaseUrl = `${DOWNLOAD_FILE}?t=${Date.now()}`;
 
   $$('[data-download]').forEach((link) => {
     link.href = releaseUrl;
     link.setAttribute('download', '');
     link.addEventListener('click', () => {
-      showToast('Скачивание началось — проверь папку «Загрузки».');
+      showToast('Скачивание установщика началось — проверь папку «Загрузки».');
+    });
+  });
+
+  $$('[data-download-portable]').forEach((link) => {
+    link.href = `${PORTABLE_FILE}?t=${Date.now()}`;
+    link.setAttribute('download', '');
+    link.addEventListener('click', () => {
+      showToast('Скачивание portable-версии началось — проверь папку «Загрузки».');
     });
   });
 
