@@ -35,7 +35,7 @@
   }
 
   const repo = resolveRepo();
-  const DOWNLOAD_FILE = 'WellyLauncher-Setup-1.0.0.exe';
+  const DOWNLOAD_FILE = 'WellyLauncher-Setup-1.0.3.exe';
   const PORTABLE_FILE = 'WellyLauncher.exe';
   const releaseUrl = `${DOWNLOAD_FILE}?t=${Date.now()}`;
 

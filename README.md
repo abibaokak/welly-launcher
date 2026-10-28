@@ -90,14 +90,23 @@ gh api -X POST repos/:owner/welly-launcher/pages \
 
 ## Как добавить файл для скачивания
 
-Сайт скачивает файл из последнего релиза с именем ровно `WellyLauncher.exe`.
+Установщик и portable-версия лежат прямо в репозитории и раздаются GitHub Pages
+(файлы больше 50 МБ GitHub не даёт загружать в Releases без LFS, поэтому выбран
+этот способ).
 
-1. Открой репозиторий → **Releases** → **Draft a new release**.
-2. Тег: `v0.6`, заголовок: `Welly Launcher v0.6`.
-3. Прикрепи собранный `WellyLauncher.exe` и опубликуй релиз.
+1. Собери установщик: `npm run build && npx electron-builder --win`.
+2. Скопируй `dist-release/WellyLauncher-Setup-<версия>.exe` и `dist-release/WellyLauncher.exe`
+   в корень этого репозитория, заменив старые файлы.
+3. Обнови имя файла в `script.js` (`DOWNLOAD_FILE`) и текст на `install.html`.
+4. Закоммить и запушь — GitHub Pages обновит файлы через минуту.
 
-Кнопки на сайте сразу начнут отдавать этот файл — ссылка `…/releases/latest/download/WellyLauncher.exe`.
-Если выпустить релиз с тем же тегом заново, GitHub сам заменит файл.
+Кнопки на сайте отдают файл из корня сайта, без GitHub Releases.
+
+## Общий каталог скинов
+
+`skins/catalog.json` — список скинов, которые видят все игроки с Welly Launcher.
+Формат и правила описаны в `skins/README.md`. Картинки лежат в той же папке,
+имя файла — SHA-256 от PNG.
 
 ## Как обновить скриншоты
 
