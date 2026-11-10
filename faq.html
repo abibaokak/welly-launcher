@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FAQ — Welly Launcher 1.0.5: Java, скины, Welly ID и SmartScreen</title>
+    <title>FAQ — Welly Launcher 1.0.7: Microsoft, скины, Welly ID и SmartScreen</title>
     <meta
       name="description"
-      content="Частые вопросы о Welly Launcher 1.0.5: безопасность, Welly ID, Java, скины, SmartScreen, поддерживаемые версии Minecraft, Fabric/Forge/OptiFine и сворачивание лаунчера во время игры."
+      content="Частые вопросы о Welly Launcher 1.0.7: безопасность, вход через Microsoft, Welly ID, Java, скины, SmartScreen, поддерживаемые версии Minecraft, Fabric/Forge/OptiFine и сворачивание лаунчера во время игры."
     />
     <meta name="theme-color" content="#08070f" />
     <meta name="color-scheme" content="dark" />
@@ -14,7 +14,7 @@
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://abibaokak.github.io/welly-launcher/faq.html" />
-    <meta property="og:title" content="FAQ — Welly Launcher 1.0.5" />
+    <meta property="og:title" content="FAQ — Welly Launcher 1.0.7" />
     <meta
       property="og:description"
       content="Коротко о том, что чаще всего спрашивают перед первым запуском."
@@ -112,7 +112,7 @@
           <h1 class="page-hero__title">FAQ</h1>
           <p class="page-hero__lead">
             Коротко о том, что чаще всего спрашивают перед первым запуском:
-            безопасность, Welly ID, Java, скины, загрузчики и SmartScreen.
+            безопасность, Microsoft и Welly ID, Java, скины, загрузчики и SmartScreen.
           </p>
         </div>
       </section>
@@ -138,10 +138,12 @@
             <details class="faq__item reveal" open>
               <summary>Это безопасно? Какие данные хранит лаунчер?</summary>
               <div class="faq__body">
-                Для оффлайн-профиля достаточно ника — пароль от Microsoft не запрашивается
-                и не хранится. Если создашь Welly ID, пароль сохраняется только в виде
-                Argon2id-хеша, а сессии защищены токенами. Скины и настройки остаются
-                на твоём компьютере.
+                Для оффлайн-профиля достаточно ника. При входе через Microsoft пароль
+                вводится только на официальном сайте Microsoft — лаунчер его не видит.
+                Полученный токен хранится в защищённом хранилище Windows (DPAPI) и
+                используется лишь для запуска игры и загрузки твоего скина. Если создашь
+                Welly ID, пароль сохраняется только в виде Argon2id-хеша, а сессии защищены
+                токенами. Скины и настройки остаются на твоём компьютере.
               </div>
             </details>
 
@@ -153,6 +155,20 @@
                 можно играть на оффлайн-профиле. Для входа нужен развёрнутый сервер
                 аккаунтов — без него Welly ID недоступен. Welly ID не выдаёт лицензию
                 Minecraft и не подходит для серверов с <code>online-mode=true</code>.
+                Лицензионный вход теперь доступен отдельно — через Microsoft, на странице
+                аккаунта.
+              </div>
+            </details>
+
+            <details class="faq__item reveal">
+              <summary>Как войти через Microsoft?</summary>
+              <div class="faq__body">
+                Открой страницу «Аккаунт» и нажми «Подключить Microsoft». Лаунчер покажет
+                код и ссылку <code>microsoft.com/link</code>: открой её в браузере, введи код
+                и подтверди вход. Пароль вводится только на сайте Microsoft. После этого
+                лаунчер получит официальный ник, UUID и скин, а для серверов с
+                <code>online-mode=true</code> игра запустится с лицензионным токеном.
+                Отключить аккаунт можно там же одной кнопкой.
               </div>
             </details>
 
@@ -168,10 +184,12 @@
             <details class="faq__item reveal">
               <summary>Скин сразу появится в игре?</summary>
               <div class="faq__body">
-                Да. Лаунчер запускает локальный сервер скинов и подключает его к игре через
-                authlib-injector, поэтому выбранный скин виден в одиночной игре и на
-                оффлайн-серверах. Другие игроки увидят его, если у них тоже установлен
-                Welly Launcher. Состояние движка скинов показывает вкладка «Скины».
+                В одиночной игре и на серверах с <code>online-mode=false</code> — да.
+                Сервер без проверки ника не передаёт текстурные данные, поэтому лаунчер
+                сам ставит <strong>CustomSkinLoader</strong> для Fabric, Quilt, Forge и
+                NeoForge и кладёт твой скин в локальную папку по нику. На серверах с
+                <code>online-mode=true</code> скин берётся из лицензионного аккаунта
+                Microsoft. После установки мода игру нужно один раз перезапустить.
               </div>
             </details>
 
@@ -276,7 +294,7 @@
                 <span class="btn__icon" aria-hidden="true">⬇</span>
                 <span class="btn__stack">
                   <strong>Скачать Welly Launcher</strong>
-                  <small>Windows 10/11 • v1.0.5</small>
+                  <small>Windows 10/11 • v1.0.7</small>
                 </span>
               </a>
               <a class="btn btn--ghost btn--lg" href="server.html">Сервер WellyFun</a>
@@ -307,7 +325,7 @@
         </nav>
 
         <p class="footer__legal">
-          Welly Launcher v1.0.5 · © <span id="year">2026</span> WellyFun. Фанатский проект,
+          Welly Launcher v1.0.7 · © <span id="year">2026</span> WellyFun. Фанатский проект,
           не связан с Mojang Studios или Microsoft. Minecraft — торговая марка Mojang Studios.
         </p>
       </div>
