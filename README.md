@@ -2,10 +2,11 @@
 
 Многостраничный сайт лаунчера на русском: главная, возможности, загрузчики,
 скриншоты, сервер, установка и FAQ. Сайт описывает актуальную версию **1.0.7**:
-вход через Microsoft, скины в одиночной игре и на серверах с `online-mode=false`
-через CustomSkinLoader, Fabric, Quilt, Forge, NeoForge и OptiFine, сворачивание
-лаунчера на время игры, тёмную, светлую и системную темы, RU/EN, 3D-редактор
-скинов и аккаунт Welly ID.
+вход через Microsoft, аккаунт Welly ID с аватаркой, скины в одиночной игре и на
+серверах с `online-mode=false` через CustomSkinLoader, Fabric, Quilt, Forge,
+NeoForge и OptiFine, косметику для скинов (шляпы, маски, ушки), сворачивание
+лаунчера на время игры, тёмную, светлую и системную темы, RU/EN и 3D-редактор
+скинов.
 
 - Чистый HTML + CSS + JS, без сборки. Общие `styles.css` и `script.js` для всех
   страниц.
@@ -24,9 +25,9 @@
   `https://donatesmp.mydonate.io/`. Адрес повторяется в шапке и подвале каждой
   страницы, а также в блоке помощи FAQ — при смене адреса обнови все страницы.
 
-> Welly ID — функция лаунчера. Серверная часть находится в
-> `../welly-launcher/server`; этот репозиторий остаётся статическим и backend
-> не содержит.
+> Welly ID — функция лаунчера: сервер аккаунтов встроен в приложение и работает
+> локально, поэтому разворачивать `../welly-launcher/server` больше не нужно.
+> Этот репозиторий остаётся статическим и backend не содержит.
 
 ## Структура
 
@@ -36,8 +37,8 @@ features.html               все возможности и блок «Что �
 loaders.html                Fabric, Quilt, Forge, NeoForge, OptiFine: как ставить и что важно знать
 screenshots.html            галерея скриншотов с лайтбоксом
 server.html                 сервер WellyFun, статус, режимы и подключение
-install.html                требования, три шага установки, SmartScreen
-faq.html                    11 частых вопросов
+install.html                требования, три шага установки, SmartScreen, SHA-256 и Welly ID
+faq.html                    13 частых вопросов
 404.html                    страница ошибки (GitHub Pages)
 sitemap.xml                 карта сайта
 robots.txt                  разрешает индексацию и указывает sitemap
@@ -96,10 +97,11 @@ gh api -X POST repos/:owner/welly-launcher/pages \
 (файлы больше 50 МБ GitHub не даёт загружать в Releases без LFS, поэтому выбран
 этот способ).
 
-1. Собери установщик: `npm run build && npx electron-builder --win`.
-2. Скопируй `dist-release/WellyLauncher-Setup-<версия>.exe` и `dist-release/WellyLauncher.exe`
+1. Собери установщик: `npm run build:win`.
+2. Скопируй `dist/WellyLauncher-Setup-<версия>.exe` и `dist/WellyLauncher.exe`
    в корень этого репозитория, заменив старые файлы.
-3. Обнови имя файла в `script.js` (`DOWNLOAD_FILE`) и текст на `install.html`.
+3. Обнови имя файла в `script.js` (`DOWNLOAD_FILE`), текст и SHA-256 установщика
+   в callout на `install.html` (`Get-FileHash .\WellyLauncher-Setup-<версия>.exe`).
 4. Закоммить и запушь — GitHub Pages обновит файлы через минуту.
 
 Кнопки на сайте отдают файл из корня сайта, без GitHub Releases.
@@ -123,14 +125,15 @@ $env:WELLY_SCREENSHOT_THEME = "dark"
 ```
 
 Доступные маршруты: `/home`, `/versions`, `/servers`, `/news`, `/settings`,
-`/skin`, `/account`. Для светлой темы задай `WELLY_SCREENSHOT_THEME=light`,
-для английского — `WELLY_SCREENSHOT_LANG=en`.
+`/skin`, `/accessories`, `/account`. Для светлой темы задай
+`WELLY_SCREENSHOT_THEME=light`, для английского — `WELLY_SCREENSHOT_LANG=en`.
 
-В галерее девять файлов: `home.png` и `skin.png` — широкие,
-`versions.png`, `versions-loaders.png`, `servers.png`, `news.png`, `settings.png`,
-`account.png` и `home-light.png` (главная в светлой теме) — парами.
-`versions-loaders.png` дополнительно используется на главной и на странице
-загрузчиков.
+В галерее десять файлов. Широкие карточки: `home.png`, `skin.png` и
+`accessories.png`; обычные: `versions.png`, `versions-loaders.png`,
+`servers.png`, `news.png`, `settings.png`, `account.png` и `home-light.png`
+(главная в светлой теме). `versions-loaders.png` дополнительно используется
+на главной и на странице загрузчиков, `account.png` — на главной и в блоке
+«Что нового» на странице возможностей.
 
 После запуска лаунчер сам сохранит PNG и закроется.
 

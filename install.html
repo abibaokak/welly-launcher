@@ -195,9 +195,9 @@
               <span class="step__icon" aria-hidden="true">🎮</span>
               <h3>Выбери ник, аккаунт и версию</h3>
               <p>
-                Введи оффлайн-ник или подключи аккаунт Microsoft в окне входа
-                на странице «Аккаунт», выбери Minecraft и нажми «Играть на сервере».
-                Клиент и Java скачаются сами.
+                Введи оффлайн-ник, создай Welly ID прямо в лаунчере или подключи
+                аккаунт Microsoft в окне входа на странице «Аккаунт», выбери Minecraft
+                и нажми «Играть на сервере». Клиент и Java скачаются сами.
               </p>
               <span class="step__note">Пароль от Microsoft вводится только на сайте Microsoft. Первый запуск может занять несколько минут — это нормально.</span>
             </li>
@@ -229,6 +229,16 @@
                 <strong>Скачивай только с этой страницы.</strong> Официальные сборки лежат
                 на GitHub в разделе релизов. Если файл пришёл в личку или с файлообменника —
                 это не Welly Launcher.
+              </div>
+            </div>
+
+            <div class="callout callout--cyan reveal">
+              <span class="callout__icon" aria-hidden="true">🧾</span>
+              <div>
+                <strong>Проверь файл.</strong> SHA-256 установщика WellyLauncher-Setup-1.0.7.exe:
+                <code style="word-break: break-all">754F22368A385915B79632E36277429B24DE2E074BC0DC48DF8B334F70164A1F</code>.
+                Сверить можно в PowerShell командой
+                <code>Get-FileHash .\WellyLauncher-Setup-1.0.7.exe</code>.
               </div>
             </div>
 
@@ -267,6 +277,15 @@
                 вводится только на сайте Microsoft, а лаунчер получает официальный ник,
                 UUID и скин. Для игры на
                 серверах с <code>online-mode=false</code> лицензия не нужна.
+              </div>
+            </div>
+            <div class="callout reveal">
+              <span class="callout__icon" aria-hidden="true">👤</span>
+              <div>
+                <strong>Welly ID — свой профиль в лаунчере.</strong> Создаётся прямо на
+                странице «Аккаунт»: ник и пароль, без почты. Сервер аккаунтов встроен в
+                лаунчер и работает локально, ничего настраивать не нужно. Аватарка профиля
+                ставится в пару кликов.
               </div>
             </div>
             <div class="callout reveal">
