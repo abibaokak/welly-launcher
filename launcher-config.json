@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "branding": {
+    "name": "Welly Launcher",
+    "tagline": "Minecraft Java Edition с Welly ID, скинами и живым сервером",
+    "siteUrl": "https://abibaokak.github.io/welly-launcher",
+    "donateUrl": "https://donatesmp.mydonate.io",
+    "discordUrl": "",
+    "telegramUrl": "",
+    "supportEmail": ""
+  },
+  "server": {
+    "host": "wellyfun.x2mc.ru",
+    "name": "WellyFun",
+    "versionRange": "1.7.2 – 26.2",
+    "modes": [
+      {
+        "id": "wellyfun-smp",
+        "name": "WellyFun SMP",
+        "description": "Классическое выживание с дружелюбным сообществом: строй базу, исследуй мир, торгуй и собирай команду.",
+        "emoji": "🌲",
+        "mode": "SMP",
+        "tag": "Выживание"
+      },
+      {
+        "id": "wellyfun-matchmaking",
+        "name": "WellyFun Matchmaking",
+        "description": "Быстрые матчи и мини-игры: заходи в хаб, выбирай режим и прыгай в бой — всё начинается за пару кликов.",
+        "emoji": "⚡",
+        "mode": "Матчмейкинг",
+        "tag": "Мини-игры"
+      },
+      {
+        "id": "wellyfun-hub",
+        "name": "WellyFun Hub",
+        "description": "Главная точка входа. Из хаба можно перейти в любой режим сервера и найти компанию для игры.",
+        "emoji": "🪐",
+        "mode": "Хаб",
+        "tag": "Все режимы"
+      }
+    ]
+  },
+  "news": {
+    "includeExternal": true,
+    "includePublished": true,
+    "externalFeeds": [
+      {
+        "url": "https://minecraft-inside.ru/feed",
+        "name": "Minecraft Inside"
+      },
+      {
+        "url": "https://ru-minecraft.ru/rss.xml",
+        "name": "Ru-Minecraft"
+      }
+    ],
+    "items": [
+      {
+        "id": "admin-1",
+        "title": "Welly Launcher 1.0.8 — уровни, косметика и чистый интерфейс",
+        "date": "2026-11-12T09:26:52.044Z",
+        "excerpt": "Убрали лишний HUD, добавили уровень за активность и 30 предметов косметики на вашем скине.",
+        "url": "https://abibaokak.github.io/welly-launcher#/news",
+        "source": "wellyfun",
+        "sourceName": "WellyFun",
+        "pinned": true,
+        "demo": false
+      },
+      {
+        "id": "admin-4",
+        "title": "Плановые работы на серверах 18 ноября",
+        "date": "2026-11-13T07:26:52.044Z",
+        "excerpt": "С 03:00 до 05:00 по МСК возможны краткие перерывы в работе авторизации и новостей.",
+        "url": "https://abibaokak.github.io/welly-launcher#/news",
+        "source": "wellyfun",
+        "sourceName": "WellyFun",
+        "pinned": false,
+        "demo": false
+      },
+      {
+        "id": "admin-2",
+        "title": "Новая система уровней: как получать XP",
+        "date": "2026-11-09T11:26:52.044Z",
+        "excerpt": "Подробно разбираем начисления, формулу перехода и восстановление прогресса после закрытия лаунчера.",
+        "url": "https://abibaokak.github.io/welly-launcher#/news",
+        "source": "wellyfun",
+        "sourceName": "WellyFun",
+        "pinned": false,
+        "demo": false
+      },
+      {
+        "id": "admin-3",
+        "title": "Косметика теперь примеряется на ваш скин",
+        "date": "2026-11-07T10:26:52.044Z",
+        "excerpt": "Больше не абстрактный персонаж: превью использует активный скин и корректные модели шляп и масок.",
+        "url": "https://abibaokak.github.io/welly-launcher#/news",
+        "source": "wellyfun",
+        "sourceName": "WellyFun",
+        "pinned": false,
+        "demo": false
+      }
+    ]
+  },
+  "defaults": {
+    "language": "ru",
+    "theme": "dark",
+    "minMemory": 2048,
+    "maxMemory": 4096,
+    "resolutionWidth": 1280,
+    "resolutionHeight": 720,
+    "fullscreen": false,
+    "hideLauncherOnGame": true,
+    "autoConnectServer": "",
+    "selectedVersion": "",
+    "accountApiUrl": "http://127.0.0.1:8787"
+  },
+  "updates": {
+    "enabled": true,
+    "latestVersion": "1.0.10",
+    "downloadUrl": "https://abibaokak.github.io/welly-launcher/WellyLauncher.exe",
+    "releaseNotesUrl": "https://abibaokak.github.io/welly-launcher/index.html#new",
+    "mandatory": false,
+    "message": "Доступна новая версия лаунчера",
+    "sha256": "b9171fb8b4296c169150c1e3434e2c9ab0bc142d5b475349f53f712ba32b03d3"
+  },
+  "maintenance": {
+    "enabled": false,
+    "message": "Идут технические работы. Лаунчер скоро вернётся.",
+    "until": ""
+  },
+  "publishedAt": "2026-11-15T15:55:31.149Z",
+  "generatedAt": "2026-11-15T15:55:31.149Z"
+}

@@ -223,7 +223,7 @@
       },
       updates: {
         enabled: true,
-        latestVersion: '1.0.9',
+        latestVersion: '1.0.10',
         downloadUrl: 'https://abibaokak.github.io/welly-launcher/WellyLauncher.exe',
         releaseNotesUrl: 'https://abibaokak.github.io/welly-launcher',
         sha256: '',
@@ -673,7 +673,7 @@
       },
       updates: {
         enabled: readBool(form, 'updates.enabled'),
-        latestVersion: cleanText(readText(form, 'updates.latestVersion'), 32, '1.0.9'),
+        latestVersion: cleanText(readText(form, 'updates.latestVersion'), 32, '1.0.10'),
         downloadUrl: cleanUrl(readText(form, 'updates.downloadUrl'), '', {
           label: 'ссылка на обновление'
         }),
