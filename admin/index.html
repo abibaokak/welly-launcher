@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welly Admin — приложение панели управления лаунчером</title>
+    <meta
+      name="description"
+      content="Welly Admin для Windows: один exe без установки. Настройки лаунчера, новости, ключи доступа, роли и аудит. Скачать WellyAdmin.exe."
+    />
+    <meta name="theme-color" content="#0b0e14" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://abibaokak.github.io/welly-launcher/admin/" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0e14'/%3E%3Cpath d='M12 18h8l5 26 6-19h6l6 19 5-26h8L48 50h-8l-5-16-5 16h-8z' fill='%23FFD700'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --bg: #0b0e14;
+        --bg-soft: #0f131c;
+        --card: #151a24;
+        --card-2: #1a2130;
+        --border: #232a37;
+        --border-strong: #2f3849;
+        --text: #e2e8f0;
+        --muted: #8b96ab;
+        --accent: #ffd700;
+        --accent-2: #ffb800;
+        --accent-soft: rgba(255, 215, 0, 0.12);
+        --success: #3ddc97;
+        --info: #5aa9ff;
+        --purple: #b388ff;
+        --cyan: #63d8e8;
+        --radius: 16px;
+        --radius-sm: 10px;
+        --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.55);
+        --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.35);
+        --font: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont, "SF Pro Display", Roboto, Arial, sans-serif;
+        --mono: "JetBrains Mono", "Cascadia Code", Consolas, "Courier New", monospace;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: var(--font);
+        color: var(--text);
+        background:
+          radial-gradient(900px 500px at 12% -10%, rgba(255, 215, 0, 0.08), transparent 60%),
+          radial-gradient(800px 460px at 100% 0%, rgba(179, 136, 255, 0.09), transparent 55%),
+          var(--bg);
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .wrap { width: min(1080px, calc(100% - 40px)); margin: 0 auto; }
+
+      header.site-head {
+        padding: 26px 0 8px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+      }
+
+      .brand:hover { text-decoration: none; }
+
+      .brand__mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(145deg, var(--accent), var(--accent-2));
+        box-shadow: 0 10px 24px rgba(255, 215, 0, 0.22);
+      }
+
+      .brand__mark svg { width: 28px; height: 28px; display: block; }
+
+      .brand__text strong { display: block; font-size: 17px; letter-spacing: 0.2px; }
+      .brand__text small { display: block; color: var(--muted); font-size: 12px; }
+
+      .badge {
+        margin-left: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: var(--bg-soft);
+        color: var(--muted);
+        font-size: 13px;
+        white-space: nowrap;
+      }
+
+      .badge .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--success);
+        box-shadow: 0 0 0 4px rgba(61, 220, 151, 0.12);
+      }
+
+      .head-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      main { padding: 46px 0 64px; }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+        gap: 40px;
+        align-items: start;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border-strong);
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0 14px;
+        font-size: clamp(30px, 4.4vw, 46px);
+        line-height: 1.12;
+        letter-spacing: -0.8px;
+      }
+
+      .lede {
+        margin: 0;
+        max-width: 560px;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .points {
+        margin: 26px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .points li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        color: var(--text);
+        font-size: 15px;
+      }
+
+      .points svg { flex: none; margin-top: 2px; }
+
+      .download-card {
+        background: linear-gradient(180deg, var(--card-2), var(--card));
+        border: 1px solid var(--border-strong);
+        border-radius: var(--radius);
+        padding: 24px;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .download-card__top {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .file-icon {
+        width: 48px;
+        height: 48px;
+        flex: none;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: rgba(90, 169, 255, 0.12);
+        border: 1px solid rgba(90, 169, 255, 0.28);
+        color: var(--info);
+      }
+
+      .download-card__top strong { display: block; font-size: 16px; }
+      .download-card__top span { color: var(--muted); font-size: 13px; }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin-top: 20px;
+        padding: 15px 20px;
+        border: 0;
+        border-radius: var(--radius-sm);
+        background: linear-gradient(145deg, var(--accent), var(--accent-2));
+        color: #16130a;
+        font: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0 14px 30px rgba(255, 215, 0, 0.2);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+
+      .btn:hover {
+        text-decoration: none;
+        transform: translateY(-1px);
+        box-shadow: 0 18px 36px rgba(255, 215, 0, 0.26);
+      }
+
+      .btn:active { transform: translateY(0); }
+
+      .meta {
+        display: grid;
+        gap: 8px;
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .meta div {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .meta b { color: var(--text); font-weight: 600; }
+
+      .hash {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
+
+      .hash span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+
+      .hash code {
+        display: block;
+        font-family: var(--mono);
+        font-size: 11.5px;
+        line-height: 1.5;
+        color: var(--cyan);
+        word-break: break-all;
+        background: var(--bg-soft);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+      }
+
+      .copy-btn {
+        margin-top: 8px;
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border-strong);
+        background: transparent;
+        color: var(--muted);
+        font: inherit;
+        font-size: 12.5px;
+        cursor: pointer;
+        transition: color 0.15s ease, border-color 0.15s ease;
+      }
+
+      .copy-btn:hover { color: var(--text); border-color: var(--accent); }
+
+      .note {
+        margin-top: 16px;
+        padding: 12px 14px;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 159, 90, 0.08);
+        border: 1px solid rgba(255, 159, 90, 0.25);
+        color: #ffd0ab;
+        font-size: 13px;
+      }
+
+      section.block { margin-top: 56px; }
+
+      h2 {
+        margin: 0 0 18px;
+        font-size: 22px;
+        letter-spacing: -0.3px;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .step {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+      }
+
+      .step__num {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 12px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--accent-soft);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .step h3 { margin: 0 0 6px; font-size: 15.5px; }
+      .step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .feature {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px;
+      }
+
+      .feature h3 {
+        margin: 0 0 6px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .feature p { margin: 0; color: var(--muted); font-size: 13.5px; }
+
+      .feature__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex: none;
+      }
+
+      footer.site-foot {
+        border-top: 1px solid var(--border);
+        padding: 26px 0 38px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .foot-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .foot-links { display: flex; flex-wrap: wrap; gap: 18px; }
+      .foot-links a { color: var(--muted); }
+      .foot-links a:hover { color: var(--accent); }
+
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; }
+        .steps, .features { grid-template-columns: 1fr 1fr; }
+      }
+
+      @media (max-width: 620px) {
+        .steps, .features { grid-template-columns: 1fr; }
+        main { padding-top: 32px; }
+        .badge { margin-left: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-head">
+      <div class="wrap head-row">
+        <a class="brand" href="../index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 16h9l5 28 6-20h6l6 20 5-28h9L49 52h-9l-5-17-5 17h-9z" fill="#0b0e14" />
+            </svg>
+          </span>
+          <span class="brand__text">
+            <strong>Welly Admin</strong>
+            <small>панель управления лаунчером</small>
+          </span>
+        </a>
+        <span class="badge"><span class="dot" aria-hidden="true"></span> Windows 10/11 · x64 · без установки</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <div class="hero">
+          <div>
+            <span class="eyebrow">Приложение для Windows</span>
+            <h1>Панель управления лаунчером — теперь отдельным приложением</h1>
+            <p class="lede">
+              Один exe без Node.js и установки. Внутри — все настройки лаунчера, новости,
+              ключи доступа, роли и журнал действий. Открывается в собственном окне,
+              данные хранятся рядом с файлом.
+            </p>
+
+            <ul class="points">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8.5 6.2 11.7 13 5" stroke="#3DDC97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Настройки, новости и режимы сервера для лаунчера — в одном месте
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8.5 6.2 11.7 13 5" stroke="#3DDC97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Одноразовые ключи доступа вместо открытой регистрации
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8.5 6.2 11.7 13 5" stroke="#3DDC97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Публикация <code>launcher-config.json</code> для живого обновления лаунчера
+              </li>
+            </ul>
+          </div>
+
+          <aside class="download-card" aria-labelledby="download-title">
+            <div class="download-card__top">
+              <span class="file-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>
+                <strong id="download-title">WellyAdmin.exe</strong>
+                <span>93,2 МБ · Windows 10/11 x64</span>
+              </span>
+            </div>
+
+            <a class="btn" href="../WellyAdmin.exe" download="WellyAdmin.exe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Скачать приложение
+            </a>
+
+            <div class="meta" aria-label="Информация о файле">
+              <div><span>Платформа</span><b>Windows 10/11 x64</b></div>
+              <div><span>Node.js</span><b>не требуется</b></div>
+              <div><span>Данные</span><b>локально, в welly-admin-data</b></div>
+              <div><span>Обновлено</span><b>15 ноября 2026</b></div>
+            </div>
+
+            <div class="hash">
+              <span>SHA-256</span>
+              <code id="sha">58306b3d384fdb935200db343479441fd5231e0f73cb2f3d44efc94a6e482234</code>
+              <button class="copy-btn" type="button" id="copy-sha">Скопировать хеш</button>
+            </div>
+
+            <p class="note">
+              Файл не подписан цифровой подписью: Windows может показать SmartScreen.
+              Нажмите «Подробнее» → «Выполнить всё равно».
+            </p>
+          </aside>
+        </div>
+
+        <section class="block" aria-labelledby="how-title">
+          <h2 id="how-title">Как начать</h2>
+          <div class="steps">
+            <article class="step">
+              <div class="step__num">1</div>
+              <h3>Скачайте и запустите</h3>
+              <p>Двойной клик по exe. Панель откроется в отдельном окне и создаст папку данных рядом с файлом.</p>
+            </article>
+            <article class="step">
+              <div class="step__num">2</div>
+              <h3>Получите доступ</h3>
+              <p>На пустой базе ключ первого владельца лежит в <code>welly-admin-data/database/FIRST-RUN-KEY.txt</code>.</p>
+            </article>
+            <article class="step">
+              <div class="step__num">3</div>
+              <h3>Настройте лаунчер</h3>
+              <p>Раздел «Лаунчер»: брендинг, сервер, новости, обновления. Кнопка «Опубликовать» пишет конфиг для сайта.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="block" aria-labelledby="features-title">
+          <h2 id="features-title">Что внутри</h2>
+          <div class="features">
+            <article class="feature">
+              <h3><span class="feature__dot" aria-hidden="true"></span> Настройки лаунчера</h3>
+              <p>Название и слоган, ссылки, режимы сервера, значения по умолчанию, обслуживание и обновления.</p>
+            </article>
+            <article class="feature">
+              <h3><span class="feature__dot" aria-hidden="true"></span> Новости</h3>
+              <p>Свои записи и внешние RSS-ленты, публикация, закрепление и предпросмотр «как в лаунчере».</p>
+            </article>
+            <article class="feature">
+              <h3><span class="feature__dot" aria-hidden="true"></span> Ключи доступа</h3>
+              <p>Одноразовые ключи для владельца, разработчика и поддержки. Полный ключ показывается один раз.</p>
+            </article>
+            <article class="feature">
+              <h3><span class="feature__dot" aria-hidden="true"></span> Роли и права</h3>
+              <p>Гибкая настройка прав по разделам: дашборд, пользователи, новости, ключи, лаунчер.</p>
+            </article>
+            <article class="feature">
+              <h3><span class="feature__dot" aria-hidden="true"></span> Журнал действий</h3>
+              <p>Кто, что и когда менял — с IP и деталями. История входов и публикаций конфига.</p>
+            </article>
+            <article class="feature">
+              <h3><span class="feature__dot" aria-hidden="true"></span> Формат приложения</h3>
+              <p>Одиночный exe: закрыли окно — панель завершилась. Повторный запуск открывает уже работающую.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-foot">
+      <div class="wrap foot-row">
+        <span>© 2026 WellyFun · Welly Admin</span>
+        <nav class="foot-links" aria-label="Ссылки">
+          <a href="../index.html">Сайт лаунчера</a>
+          <a href="../install.html">Скачать лаунчер</a>
+          <a href="../faq.html">FAQ</a>
+          <a href="https://github.com/abibaokak/welly-launcher" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var button = document.getElementById('copy-sha')
+        var code = document.getElementById('sha')
+        if (!button || !code) return
+
+        button.addEventListener('click', function () {
+          var text = code.textContent.trim()
+          var done = function () {
+            button.textContent = 'Скопировано'
+            setTimeout(function () { button.textContent = 'Скопировать хеш' }, 1800)
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, fallback)
+          } else {
+            fallback()
+          }
+
+          function fallback() {
+            var range = document.createRange()
+            range.selectNodeContents(code)
+            var selection = window.getSelection()
+            selection.removeAllRanges()
+            selection.addRange(range)
+            try { document.execCommand('copy'); done() } catch (e) { /* выделение остаётся */ }
+          }
+        })
+      })()
+    </script>
+  </body>
+</html>
