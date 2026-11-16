@@ -55,10 +55,10 @@
     ],
     "items": [
       {
-        "id": "admin-9",
-        "title": "Welly Launcher 1.0.11 — Discord и обновление в один клик",
-        "date": "2026-11-16T15:12:12.667Z",
-        "excerpt": "Кнопка Discord в лаунчере и на сайте, рабочее обновление до новой версии и честный номер сборки.",
+        "id": "admin-10",
+        "title": "Welly Launcher 1.0.12 — Discord и обновление, которое работает",
+        "date": "2026-11-16T15:25:08.561Z",
+        "excerpt": "Скачивание обновления с GitHub Pages починено: файл идёт без сжатия, длина и SHA-256 сходятся. Плюс Discord в лаунчере.",
         "url": "https://abibaokak.github.io/welly-launcher#/news",
         "source": "wellyfun",
         "sourceName": "WellyFun",
@@ -74,6 +74,17 @@
         "source": "wellyfun",
         "sourceName": "WellyFun",
         "pinned": true,
+        "demo": false
+      },
+      {
+        "id": "admin-9",
+        "title": "Welly Launcher 1.0.11 — Discord и обновление в один клик",
+        "date": "2026-11-16T15:12:12.667Z",
+        "excerpt": "Кнопка Discord в лаунчере и на сайте, рабочее обновление до новой версии и честный номер сборки.",
+        "url": "https://abibaokak.github.io/welly-launcher#/news",
+        "source": "wellyfun",
+        "sourceName": "WellyFun",
+        "pinned": false,
         "demo": false
       },
       {
@@ -126,10 +137,10 @@
   },
   "updates": {
     "enabled": true,
-    "latestVersion": "1.0.11",
-    "downloadUrl": "https://abibaokak.github.io/welly-launcher/WellyLauncher.exe",
+    "latestVersion": "1.0.12",
+    "downloadUrl": "https://github.com/abibaokak/welly-launcher/releases/download/v1.0.12/WellyLauncher.exe",
     "releaseNotesUrl": "https://abibaokak.github.io/welly-launcher/index.html#new",
-    "sha256": "b58bd8a4197484aabe642c14fb777e0f295060cb599d5ddd9abdab631e043599",
+    "sha256": "fa45d8b2a9d776d870a74f42b4ee5cc7a3b6e6b1c951c548d237022c89a55158",
     "mandatory": false,
     "message": "Доступна новая версия лаунчера"
   },
@@ -138,6 +149,6 @@
     "message": "Идут технические работы. Лаунчер скоро вернётся.",
     "until": ""
   },
-  "publishedAt": "2026-11-16T15:12:52.883Z",
-  "generatedAt": "2026-11-16T15:12:53.490Z"
+  "publishedAt": "2026-11-16T15:25:23.509Z",
+  "generatedAt": "2026-11-16T15:25:23.512Z"
 }
