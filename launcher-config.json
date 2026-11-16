@@ -5,7 +5,7 @@
     "tagline": "Minecraft Java Edition с Welly ID, скинами и живым сервером",
     "siteUrl": "https://abibaokak.github.io/welly-launcher",
     "donateUrl": "https://donatesmp.mydonate.io",
-    "discordUrl": "",
+    "discordUrl": "https://discord.gg/fJ5WTum4X",
     "telegramUrl": "",
     "supportEmail": ""
   },
@@ -54,6 +54,17 @@
       }
     ],
     "items": [
+      {
+        "id": "admin-9",
+        "title": "Welly Launcher 1.0.11 — Discord и обновление в один клик",
+        "date": "2026-11-16T15:12:12.667Z",
+        "excerpt": "Кнопка Discord в лаунчере и на сайте, рабочее обновление до новой версии и честный номер сборки.",
+        "url": "https://abibaokak.github.io/welly-launcher#/news",
+        "source": "wellyfun",
+        "sourceName": "WellyFun",
+        "pinned": true,
+        "demo": false
+      },
       {
         "id": "admin-1",
         "title": "Welly Launcher 1.0.8 — уровни, косметика и чистый интерфейс",
@@ -115,18 +126,18 @@
   },
   "updates": {
     "enabled": true,
-    "latestVersion": "1.0.10",
+    "latestVersion": "1.0.11",
     "downloadUrl": "https://abibaokak.github.io/welly-launcher/WellyLauncher.exe",
     "releaseNotesUrl": "https://abibaokak.github.io/welly-launcher/index.html#new",
+    "sha256": "b58bd8a4197484aabe642c14fb777e0f295060cb599d5ddd9abdab631e043599",
     "mandatory": false,
-    "message": "Доступна новая версия лаунчера",
-    "sha256": "b9171fb8b4296c169150c1e3434e2c9ab0bc142d5b475349f53f712ba32b03d3"
+    "message": "Доступна новая версия лаунчера"
   },
   "maintenance": {
     "enabled": false,
     "message": "Идут технические работы. Лаунчер скоро вернётся.",
     "until": ""
   },
-  "publishedAt": "2026-11-15T15:55:31.149Z",
-  "generatedAt": "2026-11-15T15:55:31.149Z"
+  "publishedAt": "2026-11-16T15:12:52.883Z",
+  "generatedAt": "2026-11-16T15:12:53.490Z"
 }

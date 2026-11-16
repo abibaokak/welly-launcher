@@ -366,6 +366,12 @@ code {
   transform: translateY(-1px);
 }
 
+.icon-link--discord:hover {
+  color: #b3b8ff;
+  border-color: rgba(88, 101, 242, 0.6);
+  background: rgba(88, 101, 242, 0.12);
+}
+
 .burger {
   display: none;
   width: 42px;
